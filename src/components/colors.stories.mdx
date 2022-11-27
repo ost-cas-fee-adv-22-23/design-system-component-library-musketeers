@@ -1,0 +1,41 @@
+<!-- Colors.stories.mdx -->
+
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config.js";
+const fullConfig = resolveConfig(tailwindConfig);
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="theme.colors.violet"
+    subtitle="Some of the violets"
+    colors={fullConfig.theme.colors.violet}
+  />
+  <ColorItem
+    title="theme.colors.pink"
+    subtitle="Some of the pinks"
+    colors={fullConfig.theme.colors.pink}
+  />
+  <ColorItem
+    title="theme.colors.slate"
+    subtitle="Some of the slates"
+    colors={fullConfig.theme.colors.slate}
+  />
+  <ColorItem
+    title="theme.colors.black"
+    colors={{ black: fullConfig.theme.colors.black}}
+  />
+  <ColorItem
+    title="theme.colors.white"
+    colors={{ white: fullConfig.theme.colors.white}}
+  />
+  <ColorItem
+    title="theme.colors.transparent"
+    colors={{ transparent: fullConfig.theme.colors.transparent}}
+  />
+
+</ColorPalette>
