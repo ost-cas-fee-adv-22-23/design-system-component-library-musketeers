@@ -16,7 +16,8 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && yes | npm run build-icons && tsc && cp ./tailwind.config.js dist",
+    "build-icons": "npx @svgr/cli --out-dir ./dist/icons -- ./src/assets/icons",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006"
   },
