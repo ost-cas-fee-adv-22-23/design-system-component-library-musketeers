@@ -1,3 +1,9 @@
+# Musketeer's Design System
+
+Wiki: https://github.com/smartive-education/design-system-component-library-musketeers/wiki
+
+Agile Board (Trello): https://trello.com/b/BK3h5ADR/mumble
+
 # Template for CAS FEE ADV Design System
 
 This is a template repository for the CAS FEE ADV design system part.
@@ -36,10 +42,11 @@ Please ensure the following prerequisites are met:
     typescript: {
       check: false,
       checkOptions: {},
-      reactDocgen: 'react-docgen-typescript',
+      reactDocgen: "react-docgen-typescript",
       reactDocgenTypescriptOptions: {
         shouldExtractLiteralValuesFromEnum: true,
-        propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+        propFilter: (prop) =>
+          prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
       },
     },
   };
@@ -54,20 +61,20 @@ Upon now, storybook is able to work with typescript (`tsx`) components and stori
 - Configure the `tailwind.config.js` to use the `stories` folder as the source for the content option:
 - Import the tailwind css file in the `.storybook/preview.js` file:
   ```js
-  import 'tailwindcss/tailwind.css';
+  import "tailwindcss/tailwind.css";
   ```
 - Configure storybook to use the postcss addon (with postcss 8 for tailwind) in the `.storybook/main.js` file:
   ```js
   addons: [
     // ... other addons
     {
-      name: '@storybook/addon-postcss',
+      name: "@storybook/addon-postcss",
       options: {
         cssLoaderOptions: {
           importLoaders: 1,
         },
         postcssLoaderOptions: {
-          implementation: require('postcss'),
+          implementation: require("postcss"),
         },
       },
     },
