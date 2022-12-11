@@ -8,7 +8,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
     if(props.size === ButtonSize.L) classes.push('p-m');
 
     return (
-        <button className={classes.join(' ')}>
+        <button className={'bg-slate-500 text-48 text-blue-500'}>
             {props.label}
         </button>
     );
