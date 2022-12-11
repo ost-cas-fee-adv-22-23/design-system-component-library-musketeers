@@ -1,15 +1,15 @@
-import React, { FC, ReactNode } from 'react';
+import React from 'react';
+import {ButtonProps, ButtonSize, ButtonType} from "./button.types";
 
-export enum ButtonType {
-  primary = 'primary',
-  secondary = 'secondary',
+export const Button: React.FC<ButtonProps> = (props) => {
+    const classes = [];
+    if(props.type === ButtonType.DEFAULT) classes.push('bg-slate-600');
+    if(props.size === ButtonSize.M) classes.push('p-s');
+    if(props.size === ButtonSize.L) classes.push('p-m');
+
+    return (
+        <button className={classes.join(' ')}>
+            {props.label}
+        </button>
+    );
 }
-
-export type ButtonProps = {
-  type: ButtonType;
-  children: ReactNode;
-};
-
-export const Button: FC<ButtonProps> = ({ type, children }) => (
-  <button className={type === ButtonType.primary ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black'}>{children}</button>
-);

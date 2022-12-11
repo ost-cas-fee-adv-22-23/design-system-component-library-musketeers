@@ -1,23 +1,11 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
-import { Button, ButtonType } from "./button";
+import {storiesOf} from "@storybook/react";
+import {cosyMeta} from '../components.config';
+import {Button} from "./button";
+import {ButtonSize, ButtonType} from "./button.types";
 
-export default {
-  title: "Components/Button",
-  component: Button,
-  argTypes: {
-    type: {
-      options: ["primary", "secondary"],
-      control: { type: "select" },
-    },
-  },
-} as ComponentMeta<typeof Button>;
-
-const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>Hello World</Button>
-);
-
-export const ButtonComponent = Template.bind({});
-ButtonComponent.args = {
-  type: ButtonType.primary,
-};
+storiesOf(`${cosyMeta.type}/Button`, module)
+    .add('with all types', () => {
+        return (
+            <Button type={ButtonType.DEFAULT} size={ButtonSize.M} label={'Button Label'}></Button>
+        );
+    });
