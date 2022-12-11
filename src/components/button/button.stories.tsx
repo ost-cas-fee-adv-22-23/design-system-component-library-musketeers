@@ -1,11 +1,42 @@
-import {storiesOf} from "@storybook/react";
+import React from "react";
 import {cosyMeta} from '../components.config';
 import {Button} from "./button";
 import {ButtonSize, ButtonType} from "./button.types";
 
-storiesOf(`${cosyMeta.type}/Button`, module)
-    .add('with all types', () => {
-        return (
-            <Button type={ButtonType.DEFAULT} size={ButtonSize.M} label={'Button Label'}></Button>
-        );
-    });
+//TODO CHECK FOR CORRECT TS CONFIG
+import Mumble from "../../assets/icons/Mumble.svg";
+
+export default {
+    title: `${cosyMeta.type}/Button`,
+    component: Button,
+    argTypes: {
+        size: {
+            options: [ButtonSize.M, ButtonSize.L],
+            control: { type: 'select' },
+        },
+    },
+};
+
+const withAllTypes = (args: any) => {
+    return (
+        <div className={'flex space-x-s'}>
+            <Button type={ButtonType.DEFAULT} size={args.size} label={'Button Label'}>
+                <Mumble/>
+            </Button>
+            <Button type={ButtonType.VIOLET} size={args.size} label={'Button Label'}>
+                <Mumble/>
+            </Button>
+            <Button type={ButtonType.GRADIENT} size={args.size} label={'Button Label'}>
+                <Mumble/>
+            </Button>
+            <Button onlyIcon={true}>
+                <Mumble/>
+            </Button>
+        </div>
+    );
+};
+
+export const WithAllTypes = withAllTypes.bind({});
+WithAllTypes.args = {
+    size: ButtonSize.M,
+};

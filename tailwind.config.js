@@ -89,6 +89,11 @@ module.exports = {
       semibold: "600",
       bold: "700",
     },
+    borderRadius: {
+      'default': '8px',
+      '24': '24px',
+      '38': '38px',
+    },
     backdropBlur: ({ theme }) => theme("blur"),
     backdropBrightness: ({ theme }) => theme("brightness"),
     backdropContrast: ({ theme }) => theme("contrast"),
@@ -99,6 +104,21 @@ module.exports = {
     backdropSaturate: ({ theme }) => theme("saturate"),
     backdropSepia: ({ theme }) => theme("sepia"),
     backgroundColor: ({ theme }) => theme("colors"),
+    backgroundImage: {
+      none: "none",
+      "gradient-to-t": "linear-gradient(to top, var(--tw-gradient-stops))",
+      "gradient-to-tr":
+          "linear-gradient(to top right, var(--tw-gradient-stops))",
+      "gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
+      "gradient-to-br":
+          "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+      "gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
+      "gradient-to-bl":
+          "linear-gradient(to bottom left, var(--tw-gradient-stops))",
+      "gradient-to-l": "linear-gradient(to left, var(--tw-gradient-stops))",
+      "gradient-to-tl":
+          "linear-gradient(to top left, var(--tw-gradient-stops))",
+    },
     backgroundOpacity: ({ theme }) => theme("opacity"),
     borderColor: ({ theme }) => ({
       ...theme("colors"),
@@ -116,6 +136,15 @@ module.exports = {
     }),
     divideColor: ({ theme }) => theme("borderColor"),
     divideOpacity: ({ theme }) => theme("borderOpacity"),
+    borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+    },
     divideWidth: ({ theme }) => theme("borderWidth"),
     dropShadow: {
       sm: "0 1px 1px rgb(0 0 0 / 0.05)",

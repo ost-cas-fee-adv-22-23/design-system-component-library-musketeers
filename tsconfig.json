@@ -17,5 +17,5 @@
     "module": "esnext",
     "target": "esnext"
   },
-  "include": ["src/index.ts"]
+  "include": ["custom.d.ts", "src/index.ts", ]
 }

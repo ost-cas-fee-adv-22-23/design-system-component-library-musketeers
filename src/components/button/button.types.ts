@@ -12,7 +12,9 @@ export enum ButtonSize {
 }
 
 export type ButtonProps = {
-    type: ButtonType;
-    size: ButtonSize;
-    label: ReactNode | string;
+    type?: ButtonType;
+    size?: ButtonSize;
+    label?: ReactNode | string;
+    children?: ReactNode;
+    onlyIcon?: boolean;
 };
