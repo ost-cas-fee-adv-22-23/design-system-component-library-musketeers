@@ -1,8 +1,8 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode } from 'react';
 
 export enum ButtonType {
-  primary = "primary",
-  secondary = "secondary",
+  primary = 'primary',
+  secondary = 'secondary',
 }
 
 export type ButtonProps = {
@@ -11,13 +11,5 @@ export type ButtonProps = {
 };
 
 export const Button: FC<ButtonProps> = ({ type, children }) => (
-  <button
-    className={
-      type === ButtonType.primary
-        ? "bg-blue-500 text-white"
-        : "bg-blue-200 text-black"
-    }
-  >
-    {children}
-  </button>
+  <button className={type === ButtonType.primary ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black'}>{children}</button>
 );
