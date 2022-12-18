@@ -19,10 +19,14 @@
     "build": "rm -rf dist && yes | npm run build-icons && tsc && cp ./tailwind.config.js dist",
     "build-icons": "npx @svgr/cli --out-dir ./dist/icons -- ./src/assets/icons",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@smartive/eslint-config": "^3.1.1",
+    "@smartive/prettier-config": "^3.0.0",
     "@storybook/addon-actions": "^6.5.14",
     "@storybook/addon-essentials": "^6.5.14",
     "@storybook/addon-interactions": "^6.5.14",
@@ -38,7 +42,9 @@
     "@types/react-dom": "^18.0.9",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "eslint": "^8.29.0",
     "postcss": "^8.4.19",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.4",
