@@ -2,7 +2,7 @@ import React from 'react';
 import {ButtonProps, ButtonSize, ButtonType} from "./button.types";
 
 export const Button: React.FC<ButtonProps> = (props) => {
-    const baseClasses = ['flex items-center text-white rounded-default border-4 border-white'];
+    const baseClasses = ['flex items-center h-fit text-white rounded-default border-4 border-white'];
     const iconClasses = 'border-4 border-white text-white rounded-38 p-m bg-slate-600 hover:bg-slate-700 hover:border-slate-100 focus:border-slate-200';
 
     if (props.type === ButtonType.DEFAULT) {
@@ -19,10 +19,11 @@ export const Button: React.FC<ButtonProps> = (props) => {
 
 
     if (props.size === ButtonSize.M) {
-        baseClasses.push('p-s');
+        baseClasses.push('px-s py-xs');
     }
+
     if (props.size === ButtonSize.L) {
-        baseClasses.push('py-m px-s');
+        baseClasses.push('px-m py-s');
     }
 
     return (
