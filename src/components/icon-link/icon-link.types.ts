@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import {HTMLAttributeAnchorTarget, ReactNode} from "react";
 
 export enum IconLinkType {
     DEFAULT = 'default',
@@ -8,5 +8,7 @@ export enum IconLinkType {
 export type IconLinkProps = {
     type?: IconLinkType;
     label?: string;
+    href?: string;
+    target?: HTMLAttributeAnchorTarget;
     children?: ReactNode;
 };

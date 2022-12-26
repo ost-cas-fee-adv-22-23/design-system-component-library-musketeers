@@ -5,13 +5,13 @@ export const IconLink: React.FC<IconLinkProps> = (props) => {
     const baseClasses = [''];
 
     return (
-        <button aria-label={props.label} className={baseClasses.join(' ')}>
+        <a target={props.target} href={props.href} className={baseClasses.join(' ')} aria-label={props.label}>
             <span>
                 {props.children}
             </span>
             <span>
                 {props.label}
             </span>
-        </button>
+        </a>
     );
 }
