@@ -12,29 +12,31 @@ export default {
             options: [ButtonSize.M, ButtonSize.L],
             control: {type: 'select'},
         },
+        type: {
+            options: [ButtonType.DEFAULT, ButtonType.VIOLET, ButtonType.GRADIENT],
+            control: {type: 'select'},
+        },
+        label: {
+            control: {type: 'text'},
+        },
+        isIconOnly: {
+            control: {type: 'boolean'},
+        },
     },
 };
 
-const withAllTypes = (args: any) => {
+const withSingleButton = (args: any) => {
     return (
-        <div className={'flex space-x-s'}>
-            <Button type={ButtonType.DEFAULT} size={args.size} label={'Button Label'}>
-                <Mumble/>
-            </Button>
-            <Button type={ButtonType.VIOLET} size={args.size} label={'Button Label'}>
-                <Mumble/>
-            </Button>
-            <Button type={ButtonType.GRADIENT} size={args.size} label={'Button Label'}>
-                <Mumble/>
-            </Button>
-            <Button isIconOnly={true}>
-                <Mumble/>
-            </Button>
-        </div>
+        <Button type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
+            <Mumble/>
+        </Button>
     );
 };
 
-export const WithAllTypes: any = withAllTypes.bind({});
-WithAllTypes.args = {
+export const WithSingleButton: any = withSingleButton.bind({});
+WithSingleButton.args = {
     size: ButtonSize.M,
+    type: ButtonType.DEFAULT,
+    label: 'Button Label',
+    isIconOnly: false
 };
