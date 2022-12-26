@@ -2,7 +2,7 @@ import React from "react";
 import {storybookMeta} from '../components.config';
 import {IconLink} from "./icon-link";
 import {IconLinkType} from "./icon-link.types";
-import Mumble from "../../assets/icons/Mumble.svg";
+import Profile from "../../assets/icons/Profile.svg";
 
 export default {
     title: `${storybookMeta.type}/IconLink`,
@@ -15,19 +15,26 @@ export default {
         label: {
             control: {type: 'text'},
         },
+        href: {
+            control: {type: 'text'},
+        },
+        target: {
+            options: ['_self', '_blank', '_parent', '_top'],
+            control: {type: 'select'},
+        },
     },
 };
 
 const withSingleIconLink = (args: any) => {
     return (
-        <IconLink type={args.type} label={args.label}>
-            <Mumble/>
+        <IconLink type={args.type} label={args.label} href={args.href} target={args.target}>
+            <Profile/>
         </IconLink>
     );
 };
 
 export const WithSingleIconLink: any = withSingleIconLink.bind({});
 WithSingleIconLink.args = {
-    type: IconLinkType.DEFAULT,
-    label: 'Label',
+    type: IconLinkType.VIOLET,
+    label: 'Username',
 };
