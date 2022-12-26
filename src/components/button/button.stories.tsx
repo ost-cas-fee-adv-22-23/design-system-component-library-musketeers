@@ -1,21 +1,42 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import { Button, ButtonType } from './button';
+import React from "react";
+import {storybookMeta} from '../components.config';
+import {Button} from "./button";
+import {ButtonSize, ButtonType} from "./button.types";
+import Mumble from "../../assets/icons/Mumble.svg";
 
 export default {
-  title: 'Components/Button',
-  component: Button,
-  argTypes: {
-    type: {
-      options: ['primary', 'secondary'],
-      control: { type: 'select' },
+    title: `${storybookMeta.type}/Button`,
+    component: Button,
+    argTypes: {
+        size: {
+            options: [ButtonSize.M, ButtonSize.L],
+            control: {type: 'select'},
+        },
+        type: {
+            options: [ButtonType.DEFAULT, ButtonType.VIOLET, ButtonType.GRADIENT],
+            control: {type: 'select'},
+        },
+        label: {
+            control: {type: 'text'},
+        },
+        isIconOnly: {
+            control: {type: 'boolean'},
+        },
     },
-  },
-} as ComponentMeta<typeof Button>;
+};
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args}>Hello World</Button>;
+const withSingleButton = (args: any) => {
+    return (
+        <Button type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
+            <Mumble/>
+        </Button>
+    );
+};
 
-export const ButtonComponent = Template.bind({});
-ButtonComponent.args = {
-  type: ButtonType.primary,
+export const WithSingleButton: any = withSingleButton.bind({});
+WithSingleButton.args = {
+    size: ButtonSize.M,
+    type: ButtonType.DEFAULT,
+    label: 'Button Label',
+    isIconOnly: false
 };

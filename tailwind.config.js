@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
-  presets: [],
-  darkMode: 'media', // or 'class'
   theme: {
     screens: {
       sm: '640px',
@@ -11,7 +9,6 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
-    supports: {},
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
@@ -89,6 +86,10 @@ module.exports = {
       semibold: '600',
       bold: '700',
     },
+    borderRadius: {
+      'default': '8px',
+      '24': '24px',
+      '38': '38px',
+    },
   },
-  plugins: [],
 };
