@@ -8,5 +8,6 @@ export enum CardSize {
 export type CardProps = {
     size: CardSize,
     hasRoundBorders?: boolean,
+    hasTopRoundBorders?: boolean,
     children?: ReactNode
 };

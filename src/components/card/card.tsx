@@ -16,6 +16,10 @@ export const Card: React.FC<CardProps> = (props) => {
         baseClasses.push('rounded-16');
     }
 
+    if (props.hasTopRoundBorders) {
+        baseClasses.push('rounded-t-16');
+    }
+
     return (
         <div className={baseClasses.join(' ')}>
             {props.children}
