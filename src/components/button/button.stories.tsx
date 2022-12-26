@@ -10,7 +10,7 @@ export default {
     argTypes: {
         size: {
             options: [ButtonSize.M, ButtonSize.L],
-            control: { type: 'select' },
+            control: {type: 'select'},
         },
     },
 };
