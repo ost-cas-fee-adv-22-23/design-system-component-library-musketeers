@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -15,7 +19,13 @@
     "allowJs": true,
     "jsx": "react",
     "module": "esnext",
-    "target": "esnext"
+    "target": "esnext",
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types"
+    ]
   },
-  "include": ["custom.d.ts", "src/index.ts", ]
+  "include": [
+    "src/index.ts"
+  ]
 }

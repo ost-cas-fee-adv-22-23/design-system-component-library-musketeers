@@ -1,3 +1,3 @@
-export const cosyMeta = {
+export const storybookMeta = {
     type: 'components'
 };

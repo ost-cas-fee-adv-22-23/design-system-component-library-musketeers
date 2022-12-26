@@ -14,7 +14,7 @@ export enum ButtonSize {
 export type ButtonProps = {
     type?: ButtonType;
     size?: ButtonSize;
-    label?: ReactNode | string;
+    label?: string;
     children?: ReactNode;
-    onlyIcon?: boolean;
+    isIconOnly?: boolean;
 };

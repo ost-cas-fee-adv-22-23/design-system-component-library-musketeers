@@ -1,13 +1,11 @@
 import React from "react";
-import {cosyMeta} from '../components.config';
+import {storybookMeta} from '../components.config';
 import {Button} from "./button";
 import {ButtonSize, ButtonType} from "./button.types";
-
-//TODO CHECK FOR CORRECT TS CONFIG
 import Mumble from "../../assets/icons/Mumble.svg";
 
 export default {
-    title: `${cosyMeta.type}/Button`,
+    title: `${storybookMeta.type}/Button`,
     component: Button,
     argTypes: {
         size: {
@@ -29,14 +27,14 @@ const withAllTypes = (args: any) => {
             <Button type={ButtonType.GRADIENT} size={args.size} label={'Button Label'}>
                 <Mumble/>
             </Button>
-            <Button onlyIcon={true}>
+            <Button isIconOnly={true}>
                 <Mumble/>
             </Button>
         </div>
     );
 };
 
-export const WithAllTypes = withAllTypes.bind({});
+export const WithAllTypes: any = withAllTypes.bind({});
 WithAllTypes.args = {
     size: ButtonSize.M,
 };
