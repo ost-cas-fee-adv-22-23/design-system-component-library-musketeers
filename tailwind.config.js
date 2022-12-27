@@ -86,12 +86,13 @@ module.exports = {
       semibold: '600',
       bold: '700',
     },
+    borderRadius: {
+      'default': '8px',
+      '16': '16px',
+      '24': '24px',
+      '38': '38px',
+    },
     extend: {
-      borderRadius: {
-        'default': '8px',
-        '24': '24px',
-        '38': '38px',
-      },
       borderWidth: {
         '6': '6px',
       }
