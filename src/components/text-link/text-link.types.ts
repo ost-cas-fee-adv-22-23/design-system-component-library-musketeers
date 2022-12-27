@@ -1,7 +1,7 @@
-import {HTMLAttributeAnchorTarget} from "react";
+import { HTMLAttributeAnchorTarget } from 'react';
 
 export type TextLinkProps = {
-    label?: string;
-    href?: string;
-    target?: HTMLAttributeAnchorTarget;
+  label?: string;
+  href?: string;
+  target?: HTMLAttributeAnchorTarget;
 };

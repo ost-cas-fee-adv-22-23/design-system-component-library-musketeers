@@ -20,8 +20,8 @@
     "build-icons": "npx @svgr/cli --out-dir ./dist/icons -- ./src/assets/icons",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint src/components/**",
+    "lint:fix": "eslint src/components/** --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
