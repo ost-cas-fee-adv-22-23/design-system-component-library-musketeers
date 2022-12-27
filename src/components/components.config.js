@@ -1,3 +1,3 @@
 export const storybookMeta = {
-    type: 'components'
+  type: 'components',
 };

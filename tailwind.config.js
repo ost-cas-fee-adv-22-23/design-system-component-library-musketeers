@@ -87,15 +87,16 @@ module.exports = {
       bold: '700',
     },
     borderRadius: {
-      'default': '8px',
-      '16': '16px',
-      '24': '24px',
-      '38': '38px',
+      default: '8px',
+      16: '16px',
+      24: '24px',
+      38: '38px',
+      full: '9999px',
     },
     extend: {
       borderWidth: {
-        '6': '6px',
-      }
-    }
+        6: '6px',
+      },
+    },
   },
 };
