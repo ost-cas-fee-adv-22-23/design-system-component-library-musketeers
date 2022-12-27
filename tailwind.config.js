@@ -88,6 +88,7 @@ module.exports = {
     },
     borderRadius: {
       'default': '8px',
+      '16': '16px',
       '24': '24px',
       '38': '38px',
     },
