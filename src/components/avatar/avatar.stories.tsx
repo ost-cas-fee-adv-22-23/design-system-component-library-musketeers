@@ -1,7 +1,7 @@
 import React from 'react';
 import { storybookMeta } from '../components.config';
 import { Avatar } from './avatar';
-import { AvatarSize } from './avatar.types';
+import { AvatarProps, AvatarSize } from './avatar.types';
 
 export default {
   title: `${storybookMeta.type}/Avatar`,
@@ -23,11 +23,11 @@ export default {
   },
 };
 
-const withSingleAvatar = (args: any) => {
+const withSingleAvatar = (args: AvatarProps) => {
   return <Avatar src={args.src} alt={args.alt} size={args.size} showBorder={args.showBorder}></Avatar>;
 };
 
-export const WithSingleAvatar: any = withSingleAvatar.bind({});
+export const WithSingleAvatar: { (args: AvatarProps): JSX.Element; args?: AvatarProps } = withSingleAvatar.bind({});
 WithSingleAvatar.args = {
   src: 'https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg',
   alt: '',

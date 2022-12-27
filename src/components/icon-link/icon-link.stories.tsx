@@ -1,7 +1,7 @@
 import React from 'react';
 import { storybookMeta } from '../components.config';
 import { IconLink } from './icon-link';
-import { IconLinkType } from './icon-link.types';
+import { IconLinkProps, IconLinkType } from './icon-link.types';
 import Profile from '../../assets/icons/Profile.svg';
 
 export default {
@@ -25,7 +25,7 @@ export default {
   },
 };
 
-const withSingleIconLink = (args: any) => {
+const withSingleIconLink = (args: IconLinkProps) => {
   return (
     <IconLink type={args.type} label={args.label} href={args.href} target={args.target}>
       <Profile />
@@ -33,7 +33,7 @@ const withSingleIconLink = (args: any) => {
   );
 };
 
-export const WithSingleIconLink: any = withSingleIconLink.bind({});
+export const WithSingleIconLink: { (args: IconLinkProps): JSX.Element; args?: IconLinkProps } = withSingleIconLink.bind({});
 WithSingleIconLink.args = {
   type: IconLinkType.VIOLET,
   label: 'Username',

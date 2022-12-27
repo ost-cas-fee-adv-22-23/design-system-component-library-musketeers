@@ -1,7 +1,7 @@
 import React from 'react';
 import { storybookMeta } from '../components.config';
 import { Button } from './button';
-import { ButtonSize, ButtonType } from './button.types';
+import { ButtonProps, ButtonSize, ButtonType } from './button.types';
 import Mumble from '../../assets/icons/Mumble.svg';
 
 export default {
@@ -25,7 +25,7 @@ export default {
   },
 };
 
-const withSingleButton = (args: any) => {
+const withSingleButton = (args: ButtonProps) => {
   return (
     <Button type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
       <Mumble />
@@ -33,7 +33,7 @@ const withSingleButton = (args: any) => {
   );
 };
 
-export const WithSingleButton: any = withSingleButton.bind({});
+export const WithSingleButton: { (args: ButtonProps): JSX.Element; args?: ButtonProps } = withSingleButton.bind({});
 WithSingleButton.args = {
   size: ButtonSize.M,
   type: ButtonType.DEFAULT,

@@ -1,6 +1,7 @@
 import React from 'react';
 import { storybookMeta } from '../components.config';
 import { TextLink } from './text-link';
+import { TextLinkProps } from './text-link.types';
 
 export default {
   title: `${storybookMeta.type}/TextLink`,
@@ -19,11 +20,11 @@ export default {
   },
 };
 
-const withSingleTextLink = (args: any) => {
+const withSingleTextLink = (args: TextLinkProps) => {
   return <TextLink label={args.label} href={args.href} target={args.target}></TextLink>;
 };
 
-export const WithSingleTextLink: any = withSingleTextLink.bind({});
+export const WithSingleTextLink: { (args: TextLinkProps): JSX.Element; args?: TextLinkProps } = withSingleTextLink.bind({});
 WithSingleTextLink.args = {
   label: 'Link Label',
 };

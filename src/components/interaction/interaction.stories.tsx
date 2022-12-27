@@ -6,7 +6,7 @@ import HeartFilled from '../../assets/icons/HeartFilled.svg';
 import Reply from '../../assets/icons/Reply.svg';
 import ReplyFilled from '../../assets/icons/ReplyFilled.svg';
 import { Interaction } from './interaction';
-import { InteractionType } from './interaction.types';
+import { InteractionProps, InteractionType } from './interaction.types';
 import { ComponentStory } from '@storybook/react';
 
 export default {
@@ -23,7 +23,7 @@ export default {
   },
 };
 
-const withSingleInteraction = (args: any) => {
+const withSingleInteraction = (args: InteractionProps) => {
   return (
     <Interaction type={args.type} active={args.active}>
       <Mumble />
@@ -32,7 +32,8 @@ const withSingleInteraction = (args: any) => {
   );
 };
 
-export const WithSingleInteraction: any = withSingleInteraction.bind({});
+export const WithSingleInteraction: { (args: InteractionProps): JSX.Element; args?: InteractionProps } =
+  withSingleInteraction.bind({});
 WithSingleInteraction.args = {
   type: InteractionType.DEFAULT,
   active: false,
@@ -62,7 +63,7 @@ export const LikeInteractionComponent: ComponentStory<any> = ({ numberOfLikes })
 };
 
 LikeInteractionComponent.storyName = 'With Like Interaction';
-LikeInteractionComponent.args = { numberOfLikes: 0 } as any;
+LikeInteractionComponent.args = { numberOfLikes: 0 };
 
 export const CommentInteractionComponent: ComponentStory<any> = ({ numberOfComments }) => {
   const [commented, setCommented] = useState(false);
@@ -88,4 +89,4 @@ export const CommentInteractionComponent: ComponentStory<any> = ({ numberOfComme
 };
 
 CommentInteractionComponent.storyName = 'With Comment Interaction';
-CommentInteractionComponent.args = { numberOfComments: 0 } as any;
+CommentInteractionComponent.args = { numberOfComments: 0 };
