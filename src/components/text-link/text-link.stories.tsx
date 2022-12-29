@@ -1,10 +1,10 @@
 import React from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { TextLink } from './text-link';
 import { TextLinkProps } from './text-link.types';
 
 export default {
-  title: `${storybookMeta.type}/TextLink`,
+  title: `${StorybookMeta.COMPONENTS}/TextLink`,
   component: TextLink,
   argTypes: {
     label: {

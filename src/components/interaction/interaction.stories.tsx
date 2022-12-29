@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import Mumble from '../../assets/icons/Mumble.svg';
 import Heart from '../../assets/icons/Heart.svg';
 import HeartFilled from '../../assets/icons/HeartFilled.svg';
@@ -10,7 +10,7 @@ import { InteractionProps, InteractionType } from './interaction.types';
 import { ComponentStory } from '@storybook/react';
 
 export default {
-  title: `${storybookMeta.type}/Interaction`,
+  title: `${StorybookMeta.COMPONENTS}/Interaction`,
   component: Interaction,
   argTypes: {
     type: {

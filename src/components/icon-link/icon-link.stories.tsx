@@ -1,11 +1,11 @@
 import React from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { IconLink } from './icon-link';
 import { IconLinkProps, IconLinkType } from './icon-link.types';
 import Profile from '../../assets/icons/Profile.svg';
 
 export default {
-  title: `${storybookMeta.type}/IconLink`,
+  title: `${StorybookMeta.COMPONENTS}/IconLink`,
   component: IconLink,
   argTypes: {
     type: {
