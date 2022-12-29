@@ -1,11 +1,11 @@
 import React from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { Button } from './button';
 import { ButtonProps, ButtonSize, ButtonType } from './button.types';
 import Mumble from '../../assets/icons/Mumble.svg';
 
 export default {
-  title: `${storybookMeta.type}/Button`,
+  title: `${StorybookMeta.COMPONENTS}/Button`,
   component: Button,
   argTypes: {
     size: {

@@ -1,7 +1,8 @@
+import { StorybookMeta } from './components.config';
 import React from 'react';
 
 export default {
-  title: `Foundations/Typography`,
+  title: `${StorybookMeta.FOUNDATIONS}/Typography`,
 };
 
 const headings = () => (

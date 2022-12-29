@@ -1,10 +1,10 @@
 import React from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { Card } from './card';
 import { CardProps, CardSize } from './card.types';
 
 export default {
-  title: `${storybookMeta.type}/Card`,
+  title: `${StorybookMeta.COMPONENTS}/Card`,
   component: Card,
   argTypes: {
     size: {

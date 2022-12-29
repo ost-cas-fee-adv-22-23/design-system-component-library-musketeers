@@ -1,10 +1,10 @@
 import React from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { Avatar } from './avatar';
 import { AvatarProps, AvatarSize } from './avatar.types';
 
 export default {
-  title: `${storybookMeta.type}/Avatar`,
+  title: `${StorybookMeta.COMPONENTS}/Avatar`,
   component: Avatar,
   argTypes: {
     src: {
