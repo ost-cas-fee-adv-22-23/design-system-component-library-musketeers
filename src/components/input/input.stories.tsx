@@ -1,12 +1,12 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React, { useState, useEffect } from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { Input } from './input';
 import { InputType } from './input.types';
 import Mumble from '../../assets/icons/Mumble.svg';
 
 export default {
-  title: `${storybookMeta.type}/Input`,
+  title: `${StorybookMeta.COMPONENTS}/Input`,
   component: Input,
   argTypes: {
     type: {

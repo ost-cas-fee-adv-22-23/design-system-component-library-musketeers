@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React, { useState, useEffect } from 'react';
-import { storybookMeta } from '../components.config';
+import { StorybookMeta } from '../components.config';
 import { Textarea } from './textarea';
 
 export default {
-  title: `${storybookMeta.type}/Textarea`,
+  title: `${StorybookMeta.COMPONENTS}/Textarea`,
   component: Textarea,
   argTypes: {
     value: {
