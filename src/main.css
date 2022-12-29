@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './fonts.css';
+
+@layer base {
+  .heading-1 {
+    @apply font-sans;
+    @apply text-48;
+    @apply font-bold;
+    @apply text-slate-600;
+    @apply leading-tight;
+  }
+
+  .heading-2 {
+    @apply font-sans;
+    @apply text-40;
+    @apply font-bold;
+    @apply text-slate-600;
+    @apply leading-tight;
+  }
+
+  .heading-3 {
+    @apply font-sans;
+    @apply text-32;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-tight;
+  }
+
+  .heading-4 {
+    @apply font-sans;
+    @apply text-24;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-tight;
+  }
+
+  .paragraph-l {
+    @apply font-sans;
+    @apply text-24;
+    @apply font-medium;
+    @apply text-slate-600;
+    @apply leading-normal;
+  }
+
+  .paragraph-m {
+    @apply font-sans;
+    @apply text-18;
+    @apply font-medium;
+    @apply text-slate-600;
+    @apply leading-normal;
+  }
+
+  .label-xl {
+    @apply font-sans;
+    @apply text-24;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-none;
+  }
+
+  .label-l {
+    @apply font-sans;
+    @apply text-20;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-none;
+  }
+
+  .label-m {
+    @apply font-sans;
+    @apply text-16;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-none;
+  }
+
+  .label-s {
+    @apply font-sans;
+    @apply text-14;
+    @apply font-semibold;
+    @apply text-slate-600;
+    @apply leading-none;
+  }
+
+  .placeholder {
+    @apply font-sans;
+    @apply text-16;
+    @apply font-medium;
+    @apply text-slate-300;
+    @apply leading-none;
+  }
+}
