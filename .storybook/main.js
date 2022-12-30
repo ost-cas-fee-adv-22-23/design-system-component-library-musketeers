@@ -47,8 +47,7 @@ module.exports = {
         {
           loader: '@svgr/webpack',
           options: {
-            icon: true,
-            replaceAttrValues: { '#475569': 'currentColor' },
+            configFile: '.svgrrc.js',
           },
         },
       ],
