@@ -41,7 +41,7 @@ const withSingleInput: ComponentStory<typeof Input> = (args) => {
 
 export const WithSingleInput = withSingleInput.bind({});
 WithSingleInput.args = {
-  type: 'text',
+  type: InputType.TEXT,
   label: 'Input label',
   value: '',
   placeholder: 'Input placeholder',
@@ -59,7 +59,7 @@ const inputTextWithoutIcon: ComponentStory<typeof Input> = (args) => {
 
 export const InputTextWithoutIcon = inputTextWithoutIcon.bind({});
 InputTextWithoutIcon.args = {
-  type: 'text',
+  type: InputType.TEXT,
   label: 'Input label',
   value: '',
   placeholder: 'Input placeholder',

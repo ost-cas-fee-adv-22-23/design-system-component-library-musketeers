@@ -16,8 +16,9 @@
     }
   },
   "scripts": {
-    "build": "rm -rf dist && yes | npm run build-icons && tsc && cp ./tailwind.config.js dist",
+    "build": "rm -rf dist && yes | npm run build-icons && tsc && npm run copy-tailwind-config",
     "build-icons": "npx @svgr/cli@5.5.0 --config-file \".svgrrc.js\" --out-dir ./dist/icons -- ./src/assets/icons",
+    "copy-tailwind-config": "cp ./tailwind.config.js dist",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint src/components/**",
