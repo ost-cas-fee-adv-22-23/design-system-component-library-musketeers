@@ -6,10 +6,6 @@ export type TabsProps = {
 
 export type TabsItemProps = {
   active: boolean;
-  label?: ReactNode;
+  label: string;
   onClick?: () => void;
-};
-
-export type TabsState = {
-  activeTab: string;
 };
