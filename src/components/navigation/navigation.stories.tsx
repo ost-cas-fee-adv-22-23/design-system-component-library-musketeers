@@ -1,14 +1,14 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
 import { Navigation } from './navigation';
-import { NavigationProps } from './navigation.types';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Navigation`,
   component: Navigation,
-};
+} as ComponentMeta<typeof Navigation>;
 
-const withSingleNavigation = (args: NavigationProps) => {
+const withSingleNavigation: ComponentStory<typeof Navigation> = (args) => {
   return (
     <div className="bg-slate-400">
       <Navigation {...args}></Navigation>
@@ -16,5 +16,4 @@ const withSingleNavigation = (args: NavigationProps) => {
   );
 };
 
-export const WithSingleNavigation: { (args: NavigationProps): JSX.Element; args?: NavigationProps } =
-  withSingleNavigation.bind({});
+export const WithSingleNavigation: ComponentStory<typeof Navigation> = withSingleNavigation.bind({});
