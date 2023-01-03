@@ -1,22 +1,22 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Header } from './header';
-import { HeaderProps } from './header.types';
 
 import { Navigation } from '../navigation/navigation';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Header`,
   component: Header,
-};
+} as ComponentMeta<typeof Header>;
 
-const withSingleHeader = (args: HeaderProps) => {
+const withSingleHeader: ComponentStory<typeof Header> = (args) => {
   return <Header {...args}></Header>;
 };
 
-export const WithSingleHeader: { (args: HeaderProps): JSX.Element; args?: HeaderProps } = withSingleHeader.bind({});
+export const WithSingleHeader: ComponentStory<typeof Header> = withSingleHeader.bind({});
 
-const withNavigationComponent = (args: HeaderProps) => {
+const withNavigationComponent: ComponentStory<typeof Header> = (args) => {
   return (
     <Header {...args}>
       <Navigation />
@@ -24,5 +24,4 @@ const withNavigationComponent = (args: HeaderProps) => {
   );
 };
 
-export const WithNavigationComponent: { (args: HeaderProps): JSX.Element; args?: HeaderProps } =
-  withNavigationComponent.bind({});
+export const WithNavigationComponent: ComponentStory<typeof Header> = withNavigationComponent.bind({});
