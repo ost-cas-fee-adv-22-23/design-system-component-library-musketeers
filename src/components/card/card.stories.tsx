@@ -1,7 +1,8 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
+import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Card } from './card';
-import { CardProps, CardSize } from './card.types';
+import { CardSize } from './card.types';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Card`,
@@ -18,9 +19,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
-};
+} as ComponentMeta<typeof Card>;
 
-const withSingleCard = (args: CardProps) => {
+const withSingleCard: ComponentStory<typeof Card> = (args) => {
   return (
     <Card size={args.size} hasRoundBorders={args.hasRoundBorders} hasTopRoundBorders={args.hasTopRoundBorders}>
       <div>
@@ -33,7 +34,7 @@ const withSingleCard = (args: CardProps) => {
   );
 };
 
-export const WithSingleCard: { (args: CardProps): JSX.Element; args?: CardProps } = withSingleCard.bind({});
+export const WithSingleCard: ComponentStory<typeof Card> = withSingleCard.bind({});
 WithSingleCard.args = {
   size: CardSize.XL,
   hasRoundBorders: false,

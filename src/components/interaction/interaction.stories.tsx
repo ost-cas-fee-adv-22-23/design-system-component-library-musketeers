@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { StorybookMeta } from '../components.config';
+import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import Mumble from '../../assets/icons/Mumble.svg';
 import Heart from '../../assets/icons/Heart.svg';
 import HeartFilled from '../../assets/icons/HeartFilled.svg';
 import Reply from '../../assets/icons/Reply.svg';
 import ReplyFilled from '../../assets/icons/ReplyFilled.svg';
 import { Interaction } from './interaction';
-import { InteractionProps, InteractionType } from './interaction.types';
-import { ComponentStory } from '@storybook/react';
+import { InteractionType } from './interaction.types';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Interaction`,
@@ -21,9 +21,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
-};
+} as ComponentMeta<typeof Interaction>;
 
-const withSingleInteraction = (args: InteractionProps) => {
+const withSingleInteraction: ComponentStory<typeof Interaction> = (args) => {
   return (
     <Interaction type={args.type} active={args.active}>
       <Mumble />
@@ -32,21 +32,20 @@ const withSingleInteraction = (args: InteractionProps) => {
   );
 };
 
-export const WithSingleInteraction: { (args: InteractionProps): JSX.Element; args?: InteractionProps } =
-  withSingleInteraction.bind({});
+export const WithSingleInteraction: ComponentStory<typeof Interaction> = withSingleInteraction.bind({});
 WithSingleInteraction.args = {
   type: InteractionType.DEFAULT,
   active: false,
 };
 
-export const LikeInteractionComponent: ComponentStory<any> = ({ numberOfLikes }) => {
+export const LikeInteractionComponent: ComponentStory<typeof Interaction> = () => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(0);
 
   useEffect(() => {
-    setLikes(numberOfLikes);
+    setLikes(0);
     setLiked(false);
-  }, [numberOfLikes]);
+  }, [0]);
 
   useEffect(() => {
     if (liked) {
@@ -63,16 +62,15 @@ export const LikeInteractionComponent: ComponentStory<any> = ({ numberOfLikes })
 };
 
 LikeInteractionComponent.storyName = 'With Like Interaction';
-LikeInteractionComponent.args = { numberOfLikes: 0 };
 
-export const CommentInteractionComponent: ComponentStory<any> = ({ numberOfComments }) => {
+export const CommentInteractionComponent: ComponentStory<typeof Interaction> = () => {
   const [commented, setCommented] = useState(false);
   const [comments, setComments] = useState(0);
 
   useEffect(() => {
-    setComments(numberOfComments);
+    setComments(0);
     setCommented(false);
-  }, [numberOfComments]);
+  }, [0]);
 
   useEffect(() => {
     if (commented) {
@@ -89,4 +87,3 @@ export const CommentInteractionComponent: ComponentStory<any> = ({ numberOfComme
 };
 
 CommentInteractionComponent.storyName = 'With Comment Interaction';
-CommentInteractionComponent.args = { numberOfComments: 0 };
