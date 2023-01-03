@@ -1,7 +1,8 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
+import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { IconLink } from './icon-link';
-import { IconLinkProps, IconLinkType } from './icon-link.types';
+import { IconLinkType } from './icon-link.types';
 import Profile from '../../assets/icons/Profile.svg';
 
 export default {
@@ -23,9 +24,9 @@ export default {
       control: { type: 'select' },
     },
   },
-};
+} as ComponentMeta<typeof IconLink>;
 
-const withSingleIconLink = (args: IconLinkProps) => {
+const withSingleIconLink: ComponentStory<typeof IconLink> = (args) => {
   return (
     <IconLink type={args.type} label={args.label} href={args.href} target={args.target}>
       <Profile />
@@ -33,7 +34,7 @@ const withSingleIconLink = (args: IconLinkProps) => {
   );
 };
 
-export const WithSingleIconLink: { (args: IconLinkProps): JSX.Element; args?: IconLinkProps } = withSingleIconLink.bind({});
+export const WithSingleIconLink: ComponentStory<typeof IconLink> = withSingleIconLink.bind({});
 WithSingleIconLink.args = {
   type: IconLinkType.VIOLET,
   label: 'Username',

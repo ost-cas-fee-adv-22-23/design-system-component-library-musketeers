@@ -1,7 +1,7 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
+import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { TextLink } from './text-link';
-import { TextLinkProps } from './text-link.types';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/TextLink`,
@@ -18,13 +18,13 @@ export default {
       control: { type: 'select' },
     },
   },
-};
+} as ComponentMeta<typeof TextLink>;
 
-const withSingleTextLink = (args: TextLinkProps) => {
+const withSingleTextLink: ComponentStory<typeof TextLink> = (args) => {
   return <TextLink label={args.label} href={args.href} target={args.target}></TextLink>;
 };
 
-export const WithSingleTextLink: { (args: TextLinkProps): JSX.Element; args?: TextLinkProps } = withSingleTextLink.bind({});
+export const WithSingleTextLink: ComponentStory<typeof TextLink> = withSingleTextLink.bind({});
 WithSingleTextLink.args = {
   label: 'Link Label',
 };
