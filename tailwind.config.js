@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -53,16 +56,6 @@ module.exports = {
         900: '#831843',
       },
     }),
-    spacing: {
-      0: '0px',
-      xxs: '4px',
-      xs: '8px',
-      s: '16px',
-      m: '24px',
-      l: '32px',
-      xl: '48px',
-      xxl: '64px',
-    },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     },
@@ -97,6 +90,15 @@ module.exports = {
     extend: {
       borderWidth: {
         6: '6px',
+      },
+      spacing: {
+        xxs: '4px',
+        xs: '8px',
+        s: '16px',
+        m: '24px',
+        l: '32px',
+        xl: '48px',
+        xxl: '64px',
       },
     },
   },
