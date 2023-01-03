@@ -1,14 +1,14 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
 import { Container } from './container';
-import { ContainerProps } from './container.types';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Container`,
   component: Container,
-};
+} as ComponentMeta<typeof Container>;
 
-const withSingleContainer = () => {
+const withSingleContainer: ComponentStory<typeof Container> = () => {
   return (
     <div className="bg-violet-700">
       <Container>
@@ -20,6 +20,4 @@ const withSingleContainer = () => {
   );
 };
 
-export const WithSingleContainer: { (args: ContainerProps): JSX.Element; args?: ContainerProps } = withSingleContainer.bind(
-  {}
-);
+export const WithSingleContainer: ComponentStory<typeof Container> = withSingleContainer.bind({});
