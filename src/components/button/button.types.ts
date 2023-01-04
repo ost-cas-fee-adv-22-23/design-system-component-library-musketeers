@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, MouseEvent } from 'react';
 
 export enum ButtonType {
   DEFAULT = 'default',
@@ -9,6 +9,7 @@ export enum ButtonType {
 export enum ButtonSize {
   M = 'm',
   L = 'l',
+  S = 's',
 }
 
 export type ButtonProps = {
@@ -17,4 +18,6 @@ export type ButtonProps = {
   label?: string;
   children?: ReactNode;
   isIconOnly?: boolean;
+  showBorder?: boolean;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
 };

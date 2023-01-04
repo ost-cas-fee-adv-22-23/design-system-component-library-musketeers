@@ -28,7 +28,7 @@ export default {
 
 const withSingleButton: ComponentStory<typeof Button> = (args) => {
   return (
-    <Button type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
+    <Button onClick={args.onClick} type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
       <Mumble />
     </Button>
   );
@@ -40,4 +40,7 @@ WithSingleButton.args = {
   type: ButtonType.DEFAULT,
   label: 'Button Label',
   isIconOnly: false,
+  onClick: () => {
+    alert('Button clicked!');
+  },
 };
