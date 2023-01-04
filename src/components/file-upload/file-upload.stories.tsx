@@ -1,7 +1,7 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { FileUpload } from './fileUpload';
+import { FileUpload } from './file-upload';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/FileUpload`,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationItemProps } from './navigationItem.types';
+import { NavigationItemProps } from './navigation-item.types';
 
 export const NavigationItem: React.FC<NavigationItemProps> = (props) => {
   const navigationItemBaseClasses =

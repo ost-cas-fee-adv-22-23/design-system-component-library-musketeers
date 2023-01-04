@@ -1,7 +1,7 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ProfileImage } from './profileImage';
+import { ProfileImage } from './profile-image';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/ProfileImage`,
