@@ -14,7 +14,7 @@ export default {
       control: { type: 'select' },
     },
     type: {
-      options: [ButtonType.DEFAULT, ButtonType.VIOLET, ButtonType.GRADIENT],
+      options: [ButtonType.DEFAULT, ButtonType.VIOLET, ButtonType.GRADIENT, ButtonType.GREY],
       control: { type: 'select' },
     },
     label: {
