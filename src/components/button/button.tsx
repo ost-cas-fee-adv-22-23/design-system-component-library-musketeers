@@ -19,6 +19,10 @@ export const Button: React.FC<ButtonProps> = ({ showBorder = true, ...props }) =
     baseClasses.push('bg-gradient-to-r from-pink-500 to-violet-600 hover:border-violet-100 focus:border-violet-200');
   }
 
+  if (props.type === ButtonType.GREY) {
+    baseClasses.push('bg-slate-300 hover:bg-slate-300 text-slate-500 hover:border-slate-100 focus:border-slate-200');
+  }
+
   if (props.size === ButtonSize.S) {
     baseClasses.push('px-xs py-xxs');
     iconClasses.push('p-s');

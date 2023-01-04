@@ -4,6 +4,7 @@ export enum ButtonType {
   DEFAULT = 'default',
   VIOLET = 'violet',
   GRADIENT = 'gradient',
+  GREY = 'grey',
 }
 
 export enum ButtonSize {
