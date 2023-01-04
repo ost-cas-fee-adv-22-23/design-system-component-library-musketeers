@@ -10,9 +10,6 @@ export default {
     label: {
       control: { type: 'text' },
     },
-    isIconOnly: {
-      control: { type: 'boolean' },
-    },
   },
 } as ComponentMeta<typeof FileUpload>;
 
