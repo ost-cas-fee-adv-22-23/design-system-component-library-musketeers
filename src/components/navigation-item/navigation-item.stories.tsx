@@ -1,6 +1,6 @@
 import React from 'react';
 import { StorybookMeta } from '../components.config';
-import { NavigationItem } from './navigationItem';
+import { NavigationItem } from './navigation-item';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import Mumble from '../../assets/icons/Mumble.svg';
 

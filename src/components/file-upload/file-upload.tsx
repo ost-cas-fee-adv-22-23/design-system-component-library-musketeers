@@ -1,5 +1,5 @@
 import React, { useId, useRef, MutableRefObject } from 'react';
-import { FileUploadProps } from './fileUpload.types';
+import { FileUploadProps } from './file-upload.types';
 import { Button } from '../button/button';
 import { ButtonType, ButtonSize } from '../button/button.types';
 import Upload from '../../assets/icons/Upload.svg';
