@@ -2,9 +2,9 @@ import React from 'react';
 import { ButtonProps, ButtonSize, ButtonType } from './button.types';
 
 export const Button: React.FC<ButtonProps> = ({ showBorder = true, ...props }) => {
-  const baseClasses = ['flex items-center h-fit text-white rounded-default'];
+  const baseClasses = ['flex items-center h-fit text-white rounded-default transition'];
   const iconClasses = [
-    'text-white rounded-38 bg-slate-600 hover:bg-slate-700 hover:border-slate-100 focus:border-slate-200',
+    'text-white rounded-38 bg-slate-600 hover:bg-slate-700 hover:border-slate-100 focus:border-slate-200 transition',
   ];
 
   if (props.type === ButtonType.DEFAULT) {
