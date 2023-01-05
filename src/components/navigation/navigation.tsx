@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationProps } from './navigation.types';
-import { NavigationItem } from '../navigationItem/navigationItem';
+import { NavigationItem } from '../navigation-item/navigation-item';
 import { Avatar } from '../avatar/avatar';
 import { AvatarSize } from '../avatar/avatar.types';
 

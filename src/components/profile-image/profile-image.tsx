@@ -1,7 +1,7 @@
 import React from 'react';
-import { ProfileImageProps } from './profileImage.types';
+import { ProfileImageProps } from './profile-image.types';
 import { Avatar } from '../avatar/avatar';
-import { AvatarSize } from '../avatar//avatar.types';
+import { AvatarSize } from '../avatar/avatar.types';
 import EditIcon from '../../assets/icons/Edit.svg';
 import { Button } from '../button/button';
 import { ButtonSize, ButtonType } from '../button/button.types';
