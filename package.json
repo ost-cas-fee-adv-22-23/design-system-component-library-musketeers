@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com",
+    "registry": "@smartive-education:registry=https://npm.pkg.github.com",
     "tag": "latest"
   },
   "files": [
