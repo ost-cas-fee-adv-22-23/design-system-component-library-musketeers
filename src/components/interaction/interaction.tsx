@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import { InteractionProps, InteractionType } from './interaction.types';
 
 export const Interaction: React.FC<InteractionProps> = (props) => {
-  const baseClasses = ['flex items-center h-fit py-xs px-s rounded-16 text-slate-600'];
+  const baseClasses = ['flex items-center h-fit py-xs px-s rounded-16 text-slate-600 transition'];
   const activeIconClasses: string[] = [];
 
   if (props.type === InteractionType.DEFAULT) {
