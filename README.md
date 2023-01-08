@@ -21,17 +21,17 @@ The latest published Storybook version is available here: https://smartive-educa
 
 ### Agile Board
 
-This is our Trello Board for this project. We've added a plugin, so every ticket will get an ID which we are refering too for branch names and commit messages.
+This is our Trello Board for this project. We've added a plugin, so every ticket will get an ID which we are refering to for branch names and commit messages.
 https://trello.com/b/BK3h5ADR/mumble
 
 ### General variable naming conventions
 
-We keep our variable names in the line of the Kettanaito Naming Cheat-Sheet. Comprehensive language-agnostic guidelines on variables naming:
+We stay in line with Ketta Naito's Naming Cheat-Sheet. Comprehensive language-agnostic guidelines on variables naming:
 https://github.com/kettanaito/naming-cheatsheet
 
 ### Branch naming
 
-Our workflow is loosely based on Git-Flow. We have a develop and main branch. our feature branches are based on the develop branch.
+Our workflow is loosely based on Git-Flow. We have a develop and a main branch. Our feature branches are based on the develop branch.
 The pattern for naming a branch is: {ticket-id}-{short}-{topic}-{title}
 If there is no ticket, it's possible to use "0" for the id.
 
@@ -62,3 +62,7 @@ Checkout the release notes here: https://github.com/smartive-education/design-sy
   - Developer Experience: Adding a new icon is just exporting it from Figma to the src/assets/icons folder - that's it. Now the Icon can be used as a React component
   - A lot of control over the React component generation. Custom templates can be used, in our solution we transform the exported Icon color from the Designer automatically to currentColor, this way the color of the icon can be set via tailwind classes
   - Webpack config for the DEV server is one thing, we also needed to add a build step for the icons to expose the icon components for NPM
+- Storybook MDX documentation pages
+  - Storybook provides some nice helpers for MDX pages
+  - We tried to use it as far as possible, as example for the Icons and Colours
+  - The issue with this is, that Tailwind CSS classes gets overridden by scoped Storybook styles on MDX pages. So for some pages, like Typography, we needed to stick with the component page setting, even if it's not a documentation page for a component
