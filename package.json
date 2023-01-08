@@ -21,8 +21,8 @@
     "copy-tailwind-preset": "cp ./tailwind-preset-config-musketeers.js dist",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
-    "lint": "eslint src/components/**",
-    "lint:fix": "eslint src/components/** --fix"
+    "lint": "eslint src/components",
+    "lint:fix": "eslint src/components --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
