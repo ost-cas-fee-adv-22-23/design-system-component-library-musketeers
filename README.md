@@ -62,3 +62,7 @@ Checkout the release notes here: https://github.com/smartive-education/design-sy
   - Developer Experience: Adding a new icon is just exporting it from Figma to the src/assets/icons folder - that's it. Now the Icon can be used as a React component
   - A lot of control over the React component generation. Custom templates can be used, in our solution we transform the exported Icon color from the Designer automatically to currentColor, this way the color of the icon can be set via tailwind classes
   - Webpack config for the DEV server is one thing, we also needed to add a build step for the icons to expose the icon components for NPM
+- Storybook MDX documentation pages
+  - Storybook provides some nice helpers for MDX pages
+  - We tried to use it as far as possible, as example for the Icons and Colours
+  - The issue with this is, that Tailwind CSS classes gets overridden by scoped Storybook styles on MDX pages. So for some pages, like Typography, we needed to stick with the component page setting, even if it's not a documentation page for a component
