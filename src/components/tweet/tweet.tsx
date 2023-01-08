@@ -19,10 +19,10 @@ export const Tweet: React.FC<TweetProps> = (props) => {
         <div className="label-xl text-slate-900 mb-xxs">{props.displayName}</div>
 
         <div className="flex gap-s">
-          <IconLink type={IconLinkType.VIOLET} label={props.userName} href="" target="">
+          <IconLink type={IconLinkType.VIOLET} label={props.userName} href="" target="" onClick={props.onClickUserName}>
             <Profile />
           </IconLink>
-          <IconLink type={IconLinkType.DEFAULT} label={props.timestamp} href="" target="">
+          <IconLink type={IconLinkType.DEFAULT} label={props.timestamp} href="" target="" onClick={props.onClickTimestamp}>
             <Time />
           </IconLink>
         </div>
