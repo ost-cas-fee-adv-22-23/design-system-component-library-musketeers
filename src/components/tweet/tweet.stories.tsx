@@ -20,34 +20,16 @@ export default {
   component: Tweet,
 } as ComponentMeta<typeof Tweet>;
 
-const withSingleTweet: ComponentStory<typeof Tweet> = () => {
+const withSingleTweet: ComponentStory<typeof Tweet> = (args) => {
   return (
     <div className="bg-slate-400 p-xl">
       <Container>
         <Tweet
-          displayName="Display Name"
-          userName="Username"
-          timestamp="timestamp"
-          avatar={
-            <Avatar
-              size={AvatarSize.M}
-              showBorder={true}
-              src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
-              alt="Display Name @displayName"
-            />
-          }
-          footer={
-            <Fragment>
-              <CommentInteractionComponent />
-
-              <LikeInteractionComponent />
-
-              <Interaction type={InteractionType.DEFAULT}>
-                <Share />
-                Copy link
-              </Interaction>
-            </Fragment>
-          }
+          displayName={args.displayName}
+          userName={args.userName}
+          timestamp={args.timestamp}
+          avatar={args.avatar}
+          footer={args.footer}
         >
           <div>
             Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non risus
@@ -76,35 +58,42 @@ const withSingleTweet: ComponentStory<typeof Tweet> = () => {
 };
 
 export const WithSingleTweet: ComponentStory<typeof Tweet> = withSingleTweet.bind({});
+WithSingleTweet.args = {
+  displayName: 'Hans Muster',
+  userName: 'hansmuster',
+  timestamp: 'timestamp',
+  avatar: (
+    <Avatar
+      size={AvatarSize.M}
+      showBorder={true}
+      src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
+      alt="Display Name @displayName"
+    />
+  ),
+  footer: (
+    <Fragment>
+      <CommentInteractionComponent />
 
-const tweetWithImage: ComponentStory<typeof Tweet> = () => {
+      <LikeInteractionComponent />
+
+      <Interaction type={InteractionType.DEFAULT}>
+        <Share />
+        Copy link
+      </Interaction>
+    </Fragment>
+  ),
+};
+
+const tweetWithImage: ComponentStory<typeof Tweet> = (args) => {
   return (
     <div className="bg-slate-400 p-xl">
       <Container>
         <Tweet
-          displayName="Display Name"
-          userName="Username"
-          timestamp="timestamp"
-          avatar={
-            <Avatar
-              size={AvatarSize.M}
-              showBorder={true}
-              src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
-              alt="Display Name @displayName"
-            />
-          }
-          footer={
-            <Fragment>
-              <CommentInteractionComponent />
-
-              <LikeInteractionComponent />
-
-              <Interaction type={InteractionType.DEFAULT}>
-                <Share />
-                Copy link
-              </Interaction>
-            </Fragment>
-          }
+          displayName={args.displayName}
+          userName={args.userName}
+          timestamp={args.timestamp}
+          avatar={args.avatar}
+          footer={args.footer}
         >
           <div>
             Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non risus
@@ -138,3 +127,28 @@ const tweetWithImage: ComponentStory<typeof Tweet> = () => {
 };
 
 export const TweetWithImage: ComponentStory<typeof Tweet> = tweetWithImage.bind({});
+TweetWithImage.args = {
+  displayName: 'Hans Muster',
+  userName: 'hansmuster',
+  timestamp: 'timestamp',
+  avatar: (
+    <Avatar
+      size={AvatarSize.M}
+      showBorder={true}
+      src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
+      alt="Display Name @displayName"
+    />
+  ),
+  footer: (
+    <Fragment>
+      <CommentInteractionComponent />
+
+      <LikeInteractionComponent />
+
+      <Interaction type={InteractionType.DEFAULT}>
+        <Share />
+        Copy link
+      </Interaction>
+    </Fragment>
+  ),
+};
