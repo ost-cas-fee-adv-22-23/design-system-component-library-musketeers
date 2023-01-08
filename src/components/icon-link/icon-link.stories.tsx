@@ -28,7 +28,7 @@ export default {
 
 const withSingleIconLink: ComponentStory<typeof IconLink> = (args) => {
   return (
-    <IconLink type={args.type} label={args.label} href={args.href} target={args.target}>
+    <IconLink {...args}>
       <Profile />
     </IconLink>
   );

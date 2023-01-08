@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, MouseEvent } from 'react';
 
 export enum InteractionType {
   DEFAULT = 'default',
@@ -9,6 +9,6 @@ export enum InteractionType {
 export type InteractionProps = {
   type?: InteractionType;
   active?: boolean;
-  onClick?: () => void;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
 };

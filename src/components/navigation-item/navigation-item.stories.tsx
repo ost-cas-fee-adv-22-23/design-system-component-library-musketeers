@@ -22,7 +22,4 @@ const withSingleNavigationItem: ComponentStory<typeof NavigationItem> = (args) =
 export const WithSingleNavigation: ComponentStory<typeof NavigationItem> = withSingleNavigationItem.bind({});
 WithSingleNavigation.args = {
   label: 'Item',
-  onClick: () => {
-    alert('Item clicked!');
-  },
 };

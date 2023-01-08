@@ -20,7 +20,4 @@ const withSingleFileUpload: ComponentStory<typeof FileUpload> = (args) => {
 export const WithSingleFileUpload: ComponentStory<typeof FileUpload> = withSingleFileUpload.bind({});
 WithSingleFileUpload.args = {
   label: '... oder Datei auswählen',
-  onChange: (event) => {
-    alert('onChange: ' + event.currentTarget.value);
-  },
 };

@@ -25,7 +25,7 @@ export default {
 
 const withSingleInteraction: ComponentStory<typeof Interaction> = (args) => {
   return (
-    <Interaction type={args.type} active={args.active}>
+    <Interaction type={args.type} active={args.active} onClick={args.onClick}>
       <Mumble />
       Copy link
     </Interaction>

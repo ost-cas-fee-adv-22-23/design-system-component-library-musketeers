@@ -13,7 +13,13 @@ export const IconLink: React.FC<IconLinkProps> = (props) => {
   }
 
   return (
-    <a target={props.target} href={props.href} className={baseClasses.join(' ')} aria-label={props.label}>
+    <a
+      onClick={props.onClick}
+      target={props.target}
+      href={props.href}
+      className={baseClasses.join(' ')}
+      aria-label={props.label}
+    >
       <span>{props.children}</span>
       <span className={'pl-xxs'}>{props.label}</span>
     </a>

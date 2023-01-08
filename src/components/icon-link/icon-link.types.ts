@@ -1,4 +1,4 @@
-import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
+import { HTMLAttributeAnchorTarget, ReactNode, MouseEvent } from 'react';
 
 export enum IconLinkType {
   DEFAULT = 'default',
@@ -11,4 +11,5 @@ export type IconLinkProps = {
   href?: string;
   target?: HTMLAttributeAnchorTarget;
   children?: ReactNode;
+  onClick: (e: MouseEvent<HTMLAnchorElement>) => void;
 };
