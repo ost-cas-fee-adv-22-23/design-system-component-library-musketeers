@@ -20,8 +20,4 @@ const withSingleHashtag: ComponentStory<typeof Hashtag> = (args) => {
 export const WithSingleHashtag: ComponentStory<typeof Hashtag> = withSingleHashtag.bind({});
 WithSingleHashtag.args = {
   label: 'hashtagLabel',
-  onClick: (event) => {
-    event.preventDefault();
-    alert('Hashtag clicked!');
-  },
 };

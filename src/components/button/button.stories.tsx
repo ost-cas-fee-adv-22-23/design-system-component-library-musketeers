@@ -40,9 +40,6 @@ WithSingleButton.args = {
   type: ButtonType.DEFAULT,
   label: 'Button Label',
   isIconOnly: false,
-  onClick: () => {
-    alert('Button clicked!');
-  },
 };
 
 export const ButtonDefault: ComponentStory<typeof Button> = withSingleButton.bind({});
