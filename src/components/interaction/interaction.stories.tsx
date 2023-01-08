@@ -38,7 +38,7 @@ WithSingleInteraction.args = {
   active: false,
 };
 
-export const LikeInteractionComponent: ComponentStory<typeof Interaction> = () => {
+export const LikeInteractionComponent: ComponentStory<React.FC> = () => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(0);
 
@@ -63,7 +63,7 @@ export const LikeInteractionComponent: ComponentStory<typeof Interaction> = () =
 
 LikeInteractionComponent.storyName = 'With Like Interaction';
 
-export const CommentInteractionComponent: ComponentStory<typeof Interaction> = () => {
+export const CommentInteractionComponent: ComponentStory<React.FC> = () => {
   const [commented, setCommented] = useState(false);
   const [comments, setComments] = useState(0);
 

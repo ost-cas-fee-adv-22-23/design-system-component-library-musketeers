@@ -30,6 +30,8 @@ const withSingleTweet: ComponentStory<typeof Tweet> = (args) => {
           timestamp={args.timestamp}
           avatar={args.avatar}
           footer={args.footer}
+          onClickUserName={args.onClickUserName}
+          onClickTimestamp={args.onClickTimestamp}
         >
           <div>
             Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non risus
@@ -76,12 +78,14 @@ WithSingleTweet.args = {
 
       <LikeInteractionComponent />
 
-      <Interaction type={InteractionType.DEFAULT}>
+      <Interaction type={InteractionType.DEFAULT} onClick={(event) => event}>
         <Share />
         Copy link
       </Interaction>
     </Fragment>
   ),
+  onClickUserName: (event) => event,
+  onClickTimestamp: (event) => event,
 };
 
 const tweetWithImage: ComponentStory<typeof Tweet> = (args) => {
@@ -94,6 +98,8 @@ const tweetWithImage: ComponentStory<typeof Tweet> = (args) => {
           timestamp={args.timestamp}
           avatar={args.avatar}
           footer={args.footer}
+          onClickUserName={args.onClickUserName}
+          onClickTimestamp={args.onClickTimestamp}
         >
           <div>
             Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non risus
@@ -145,10 +151,12 @@ TweetWithImage.args = {
 
       <LikeInteractionComponent />
 
-      <Interaction type={InteractionType.DEFAULT}>
+      <Interaction type={InteractionType.DEFAULT} onClick={(event) => event}>
         <Share />
         Copy link
       </Interaction>
     </Fragment>
   ),
+  onClickUserName: (event) => event,
+  onClickTimestamp: (event) => event,
 };
