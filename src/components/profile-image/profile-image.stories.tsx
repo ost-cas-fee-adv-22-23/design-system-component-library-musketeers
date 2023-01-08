@@ -6,14 +6,6 @@ import { ProfileImage } from './profile-image';
 export default {
   title: `${StorybookMeta.COMPONENTS}/ProfileImage`,
   component: ProfileImage,
-  argTypes: {
-    src: {
-      control: { type: 'text' },
-    },
-    alt: {
-      control: { type: 'text' },
-    },
-  },
 } as ComponentMeta<typeof ProfileImage>;
 
 const withSingleProfileImage: ComponentStory<typeof ProfileImage> = (args) => {
@@ -24,7 +16,4 @@ export const WithSingleProfileImage: ComponentStory<typeof ProfileImage> = withS
 WithSingleProfileImage.args = {
   src: 'https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg',
   alt: 'Profile Image alt attribute text',
-  onClick: () => {
-    alert('Edit button clicked!');
-  },
 };
