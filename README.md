@@ -21,17 +21,17 @@ The latest published Storybook version is available here: https://smartive-educa
 
 ### Agile Board
 
-This is our Trello Board for this project. We've added a plugin, so every ticket will get an ID which we are refering too for branch names and commit messages.
+This is our Trello Board for this project. We've added a plugin, so every ticket will get an ID which we are refering to for branch names and commit messages.
 https://trello.com/b/BK3h5ADR/mumble
 
 ### General variable naming conventions
 
-We keep our variable names in the line of the Kettanaito Naming Cheat-Sheet. Comprehensive language-agnostic guidelines on variables naming:
+We stay in line with Ketta Naito's Naming Cheat-Sheet. Comprehensive language-agnostic guidelines on variables naming:
 https://github.com/kettanaito/naming-cheatsheet
 
 ### Branch naming
 
-Our workflow is loosely based on Git-Flow. We have a develop and main branch. our feature branches are based on the develop branch.
+Our workflow is loosely based on Git-Flow. We have a develop and a main branch. Our feature branches are based on the develop branch.
 The pattern for naming a branch is: {ticket-id}-{short}-{topic}-{title}
 If there is no ticket, it's possible to use "0" for the id.
 
