@@ -44,3 +44,35 @@ WithSingleButton.args = {
     alert('Button clicked!');
   },
 };
+
+export const ButtonDefault: ComponentStory<typeof Button> = withSingleButton.bind({});
+ButtonDefault.args = {
+  size: ButtonSize.M,
+  type: ButtonType.DEFAULT,
+  label: 'Button Label',
+  isIconOnly: false,
+};
+
+export const ButtonViolet: ComponentStory<typeof Button> = withSingleButton.bind({});
+ButtonViolet.args = {
+  size: ButtonSize.M,
+  type: ButtonType.VIOLET,
+  label: 'Button Label',
+  isIconOnly: false,
+};
+
+export const ButtonGradient: ComponentStory<typeof Button> = withSingleButton.bind({});
+ButtonGradient.args = {
+  size: ButtonSize.M,
+  type: ButtonType.GRADIENT,
+  label: 'Button Label',
+  isIconOnly: false,
+};
+
+export const ButtonGrey: ComponentStory<typeof Button> = withSingleButton.bind({});
+ButtonGrey.args = {
+  size: ButtonSize.M,
+  type: ButtonType.GREY,
+  label: 'Button Label',
+  isIconOnly: false,
+};
