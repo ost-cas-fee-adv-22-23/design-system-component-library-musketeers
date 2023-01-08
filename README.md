@@ -27,11 +27,22 @@ https://trello.com/b/BK3h5ADR/mumble
 ### Branch naming
 
 Our workflow is loosely based on Git-Flow. We have a develop and main branch. our feature branches are based on the develop branch.
+The pattern for naming a branch is: {ticket-id}-{short}-{topic}-{title}
+If there is no ticket, it's possible to use "0" for the id.
 
 ### Commit Messages
 
 We base our commit messages on Conventional Commits, which integrates nicely with Semantic Release:
+
 https://www.conventionalcommits.org/en/v1.0.0/
+
+Valid commit subject examples:
+
+"feat: #99 Header component"
+
+"fix: #0 Button type declarations"
+
+"docs: Update readme"
 
 ### Releases Notes
 
