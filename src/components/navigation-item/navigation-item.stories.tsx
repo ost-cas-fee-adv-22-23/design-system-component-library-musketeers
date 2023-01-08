@@ -19,7 +19,7 @@ const withSingleNavigationItem: ComponentStory<typeof NavigationItem> = (args) =
   );
 };
 
-export const WithSingleNavigation: ComponentStory<typeof NavigationItem> = withSingleNavigationItem.bind({});
-WithSingleNavigation.args = {
+export const WithSingleNavigationItem: ComponentStory<typeof NavigationItem> = withSingleNavigationItem.bind({});
+WithSingleNavigationItem.args = {
   label: 'Item',
 };
