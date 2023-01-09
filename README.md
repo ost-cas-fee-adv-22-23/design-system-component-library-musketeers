@@ -66,8 +66,7 @@ module.exports = {
     require('@smartive-education/design-system-component-library-musketeers/preset')
   ],
   content: [
-    './pages/**/*.{html,js,tsx}',
-    './components/**/*.{html,js,tsx}',
+    // Project content paths
   ],
 }
 ```
