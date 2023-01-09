@@ -78,7 +78,7 @@ Now you are ready to use the design token from its design system.
 After the setup you will be able to use all components from the design system. Import your desired component as followed.
 
 ```javascript
-import { Header } from '@smartive-education/design-system-component-library-musketeers/components';
+import { Header } from '@smartive-education/design-system-component-library-musketeers';
 ```
 
 #### Usage
