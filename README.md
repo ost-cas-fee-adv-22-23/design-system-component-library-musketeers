@@ -12,8 +12,90 @@ The latest published Storybook version is available here: https://smartive-educa
 ## How To Use The Library In Your React/Next.js Project
 
 ### Package Installation
+In order to install this design system into your repository you have to install following packages.
+
+### 1. Design System installation
+
+Before we can install the design system package we need to make sure we have the correct authentication setup in order to access the repository.
+
+Setup a .npmrc file in the root of your repository and paste following lines into it.
+
+Replace the {{TOKEN}} with your personal token.
+
+```bash
+@smartive-education:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken={{TOKEN}}
+```
+
+This will make the design system available in your repository
+
+```bash
+npm install @smartive-education/design-system-component-library-musketeers
+```
+
+### 2. Tailwind, Postcss & Autoprefixer installation
+
+The design system is based on tailwind-css and post-css, so in order to make the system work we need to install these packages and set it up properly. 
+
+The tailwind configuration will be described in the next section.
+
+Installs the necessary packages
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+Sets up tailwind css and generates tailwind.config.js and postcss.config.js
+
+```bash
+npx tailwindcss init -p
+```
+
+Head to "Tailwind Configuration" section to continue the setup.
 
 ### Tailwind Configuration
+
+Since all packages and configuration files are now available we need to load the design system config as a preset into the repository in order to make the design tokens available.
+
+#### tailwind.config.js
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  presets: [
+    require('@smartive-education/design-system-component-library-musketeers/preset')
+  ],
+  content: [
+    './pages/**/*.{html,js,tsx}',
+    './components/**/*.{html,js,tsx}',
+  ],
+}
+```
+
+Now you are ready to use the design token from its design system.
+
+### Components usage
+
+After the setup you will be able to use all components from the design system. Import your desired component as followed.
+
+```javascript
+import { Header } from '@smartive-education/design-system-component-library-musketeers/components';
+```
+
+#### Usage
+
+Now you can use the components as followed. Check the design system for the correct useage and see what props are available.
+
+```javascript
+export default function Home() {
+  return (
+      <>
+        <Header></Header>
+        ...
+      </>
+  )
+}
+```
 
 ### SVG Icons
 
