@@ -11,9 +11,10 @@
   ],
   "types": "dist/index.d.ts",
   "exports": {
-    ".": {
+    "./components": {
       "import": "./dist/index.js"
-    }
+    },
+    "./preset": "./dist/tailwind-preset-config-musketeers.js"
   },
   "scripts": {
     "build": "rm -rf dist && yes | npm run build-icons && tsc && npm run copy-tailwind-preset",
