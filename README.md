@@ -12,7 +12,7 @@ The latest published Storybook version is available here: https://smartive-educa
 ## How To Use The Library In Your React/Next.js Project
 
 ### Package Installation
-In order to install this design system into your repository you have to install following packages.
+In order to make use of this design system you have to follow these setup steps.
 
 ### 1. Design System installation
 
