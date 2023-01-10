@@ -3,7 +3,7 @@ import { StorybookMeta } from '../components.config';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button } from './button';
 import { ButtonSize, ButtonType } from './button.types';
-import Mumble from '../../assets/icons/Mumble.svg';
+import Mumble from '../../components/icons/Mumble';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Button`,

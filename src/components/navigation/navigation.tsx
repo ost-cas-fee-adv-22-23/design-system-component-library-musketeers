@@ -4,8 +4,8 @@ import { NavigationItem } from '../navigation-item/navigation-item';
 import { Avatar } from '../avatar/avatar';
 import { AvatarSize } from '../avatar/avatar.types';
 
-import Settings from '../../assets/icons/Settings.svg';
-import LogOut from '../../assets/icons/Log Out.svg';
+import Settings from '../../components/icons/Settings';
+import LogOut from '../../components/icons/LogOut';
 
 export const Navigation: React.FC<NavigationProps> = () => {
   return (

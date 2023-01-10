@@ -7,8 +7,8 @@ import { CardSize } from '../card/card.types';
 import { IconLink } from '../icon-link/icon-link';
 import { IconLinkType } from '../icon-link/icon-link.types';
 
-import Profile from '../../assets/icons/Profile.svg';
-import Time from '../../assets/icons/Time.svg';
+import Profile from '../../components/icons/Profile';
+import Time from '../../components/icons/Time';
 
 export const Tweet: React.FC<TweetProps> = (props) => {
   return (

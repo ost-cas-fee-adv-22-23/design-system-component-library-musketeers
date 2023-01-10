@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { StorybookMeta } from '../components.config';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import Mumble from '../../assets/icons/Mumble.svg';
-import Heart from '../../assets/icons/Heart.svg';
-import HeartFilled from '../../assets/icons/HeartFilled.svg';
-import Reply from '../../assets/icons/Reply.svg';
-import ReplyFilled from '../../assets/icons/ReplyFilled.svg';
+import Mumble from '../../components/icons/Mumble';
+import Heart from '../../components/icons/Heart';
+import HeartFilled from '../../components/icons/HeartFilled';
+import Reply from '../../components/icons/Reply';
+import ReplyFilled from '../../components/icons/ReplyFilled';
 import { Interaction } from './interaction';
 import { InteractionType } from './interaction.types';
 

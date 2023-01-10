@@ -3,7 +3,7 @@ import { StorybookMeta } from '../components.config';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { IconLink } from './icon-link';
 import { IconLinkType } from './icon-link.types';
-import Profile from '../../assets/icons/Profile.svg';
+import Profile from '../../components/icons/Profile';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/IconLink`,

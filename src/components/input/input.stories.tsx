@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { StorybookMeta } from '../components.config';
 import { Input } from './input';
 import { InputType } from './input.types';
-import Mumble from '../../assets/icons/Mumble.svg';
+import Mumble from '../../components/icons/Mumble';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/Input`,
