@@ -65,11 +65,11 @@ In order to apply the design tokens to our system we need also to specify the co
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [
-      // Loading design tokens as presets
+      // Loads design tokens as presets
     require('@smartive-education/design-system-component-library-musketeers/preset')
   ],
   content: [
-      // Specify content path to our system in order to apply tokens
+      // Specifies content path to our design system components in order to apply design tokens
     './node_modules/@smartive-education/design-system-component-library-musketeers/dist/components/**/*.js',
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
