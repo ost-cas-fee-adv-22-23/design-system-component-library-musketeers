@@ -29,31 +29,4 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
-  webpackFinal: async (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
-
-    // SVGR 5.5 Webpack 4 configuration
-    // Modify storybook's file-loader rule to avoid conflicts with svgr
-    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test('.svg'));
-    fileLoaderRule.exclude = pathToInlineSvg;
-
-    // Add rule with configuration to process .svg imports via SVGR
-    config.module.rules.push({
-      test: /\.svg$/,
-      include: pathToInlineSvg,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            configFile: '.svgrrc.js',
-          },
-        },
-      ],
-    });
-
-    // Return the altered config
-    return config;
-  },
 };
