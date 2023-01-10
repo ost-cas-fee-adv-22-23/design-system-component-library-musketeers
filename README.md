@@ -143,9 +143,6 @@ export default function Icon() {
 }
 ```
 
-
-
-
 #### Available SVG Icons
 
 ![alt icons](./documentation/images/icons.png)
