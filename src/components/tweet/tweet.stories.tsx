@@ -9,7 +9,7 @@ import { Hashtag } from '../hashtag/hashtag';
 import { Avatar } from '../avatar/avatar';
 import { AvatarSize } from '../avatar/avatar.types';
 
-import Share from '../../assets/icons/Share.svg';
+import Share from '../../components/icons/Share';
 
 import { CommentInteractionComponent, LikeInteractionComponent } from '../interaction/interaction.stories';
 import { Interaction } from '../interaction/interaction';

@@ -15,8 +15,7 @@
     "allowJs": true,
     "jsx": "react",
     "module": "esnext",
-    "target": "esnext",
-    "typeRoots": ["./src/@types", "./node_modules/@types"]
+    "target": "esnext"
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]
