@@ -104,7 +104,7 @@ export default function Home() {
 }
 ```
 
-### Available Components
+#### Available Components
 1. avatar
 2. button
 3. card
@@ -122,6 +122,33 @@ export default function Home() {
 15. textarea
 
 ### SVG Icons
+
+The design system comes with a set of svg icons. The icons are automatically generated into javascript components and can be imported as followed.
+
+```javascript
+import { ArrowUp } from '@smartive-education/design-system-component-library-musketeers';
+```
+
+The icon name is also the component name and can be used for the import. Here is an example:
+
+```javascript
+import { ArrowUp } from '@smartive-education/design-system-component-library-musketeers';
+
+export default function Icon() {
+  return (
+      <>
+        <ArrowUp />
+      </>
+  )
+}
+```
+
+
+
+
+#### Available SVG Icons
+
+![alt icons](./documentation/images/icons.png)
 
 ## Project Development History and Learnings
 
