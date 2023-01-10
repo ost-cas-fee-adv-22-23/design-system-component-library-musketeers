@@ -57,16 +57,22 @@ Head to "Tailwind Configuration" section to continue the setup.
 
 Since all packages and configuration files are now available we need to load the design system config as a preset into the repository in order to make the design tokens available.
 
+In order to apply the design tokens to our system we need also to specify the content path to our components in the libary.
+
 #### tailwind.config.js
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [
+      // Loading design tokens as presets
     require('@smartive-education/design-system-component-library-musketeers/preset')
   ],
   content: [
-    // Project content paths
+      // Specify content path to our system in order to apply tokens
+    './node_modules/@smartive-education/design-system-component-library-musketeers/dist/components/**/*.js',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
 }
 ```
