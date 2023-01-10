@@ -84,8 +84,10 @@ Now you are ready to use the design token from its design system.
 After the setup you will be able to use all components from the design system. Import your desired component as followed.
 
 ```javascript
-import { Header } from '@smartive-education/design-system-component-library-musketeers';
+import { Component } from '@smartive-education/design-system-component-library-musketeers';
 ```
+
+Check the available components section to see which components ready for use
 
 #### Usage
 
@@ -95,12 +97,29 @@ Now you can use the components as followed. Check the design system for the corr
 export default function Home() {
   return (
       <>
-        <Header></Header>
+        <Component></Component>
         ...
       </>
   )
 }
 ```
+
+### Available Components
+1. avatar
+2. button
+3. card
+4. container
+5. file-upload
+6. header
+7. icon-link
+8. input
+9. interaction
+10. navigation
+11. navigation-item
+12. profile-image
+13. tabs
+14. text-link
+15. textarea
 
 ### SVG Icons
 
