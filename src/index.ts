@@ -10,7 +10,7 @@ export * from './components/icons/';
 export * from './components/input/input';
 export * from './components/interaction/interaction';
 export * from './components/navigation/navigation';
-export * from './components/navigation-item/navigation-item';
+export * from './components/navigation/navigation-item';
 export * from './components/profile-image/profile-image';
 export * from './components/tabs/tabs';
 export * from './components/text-link/text-link';
