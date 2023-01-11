@@ -23,6 +23,9 @@ export default {
     isIconOnly: {
       control: { type: 'boolean' },
     },
+    showBorder: {
+      control: { type: 'boolean' },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
