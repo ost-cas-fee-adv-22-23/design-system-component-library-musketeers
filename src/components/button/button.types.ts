@@ -20,5 +20,6 @@ export type ButtonProps = {
   children?: ReactNode;
   isIconOnly?: boolean;
   showBorder?: boolean;
+  isFullWidth?: boolean;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
 };
