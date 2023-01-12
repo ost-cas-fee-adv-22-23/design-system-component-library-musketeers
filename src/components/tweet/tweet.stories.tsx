@@ -16,7 +16,7 @@ import { Interaction } from '../interaction/interaction';
 import { InteractionType } from '../interaction/interaction.types';
 
 export default {
-  title: `${StorybookMeta.COMPONENTS}/Tweet`,
+  title: `${StorybookMeta.EXAMPLES}/Tweet`,
   component: Tweet,
 } as ComponentMeta<typeof Tweet>;
 
