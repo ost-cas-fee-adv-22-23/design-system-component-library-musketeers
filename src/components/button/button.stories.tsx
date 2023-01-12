@@ -31,7 +31,7 @@ export default {
 
 const withSingleButton: ComponentStory<typeof Button> = (args) => {
   return (
-    <Button onClick={args.onClick} type={args.type} size={args.size} label={args.label} isIconOnly={args.isIconOnly}>
+    <Button {...args}>
       <Mumble />
     </Button>
   );
@@ -75,4 +75,13 @@ ButtonGrey.args = {
   type: ButtonType.GREY,
   label: 'Button Label',
   isIconOnly: false,
+};
+
+export const ButtonVioletFullWidth: ComponentStory<typeof Button> = withSingleButton.bind({});
+ButtonVioletFullWidth.args = {
+  size: ButtonSize.M,
+  type: ButtonType.VIOLET,
+  label: 'Button Label',
+  isIconOnly: false,
+  isFullWidth: true,
 };

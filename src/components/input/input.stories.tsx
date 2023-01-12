@@ -64,3 +64,13 @@ InputTextWithoutIcon.args = {
   value: '',
   placeholder: 'Input placeholder',
 };
+
+export const InputTextWithError = withSingleInput.bind({});
+InputTextWithError.args = {
+  type: InputType.TEXT,
+  label: 'Input label',
+  value: '',
+  placeholder: 'Input placeholder',
+  hasError: true,
+  errorMessage: 'This field has an error.',
+};

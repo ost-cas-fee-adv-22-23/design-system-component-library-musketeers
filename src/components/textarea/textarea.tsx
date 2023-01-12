@@ -1,7 +1,7 @@
 import React, { useId } from 'react';
 import { TextareaProps } from './textarea.types';
 
-export const Textarea: React.FC<TextareaProps> = ({ label, value, onChange, placeholder, rows = 8 }) => {
+export const Textarea: React.FC<TextareaProps> = ({ rows = 8, ...props }) => {
   const id = useId();
 
   const labelBaseClasses = `label-m`;
@@ -10,8 +10,6 @@ export const Textarea: React.FC<TextareaProps> = ({ label, value, onChange, plac
     'w-full',
     'rounded-default',
     'bg-slate-50',
-    'border',
-    'border-slate-200',
     'p-s',
     'leading-normal',
     'text-16',
@@ -25,19 +23,28 @@ export const Textarea: React.FC<TextareaProps> = ({ label, value, onChange, plac
     'h-auto',
   ];
 
+  if (props.hasError) {
+    textareaBaseClasses.push('border-2 border-red');
+  } else {
+    textareaBaseClasses.push('border border-slate-200');
+  }
+
+  const errorMessageClasses = ['font-sans font-medium leading-normal text-red text-12 text-right'];
+
   return (
     <div>
       <label className={labelBaseClasses} htmlFor={id}>
-        {label}
+        {props.label}
       </label>
       <textarea
         id={id}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
+        value={props.value}
+        onChange={props.onChange}
+        placeholder={props.placeholder}
         className={textareaBaseClasses.join(' ')}
         rows={rows}
       />
+      {props.hasError && props.errorMessage ? <div className={errorMessageClasses.join(' ')}>{props.errorMessage}</div> : ''}
     </div>
   );
 };

@@ -39,3 +39,13 @@ WithSingleTextarea.args = {
   placeholder: 'Textarea placeholder',
   rows: 8,
 };
+
+export const TextareaWithError = withSingleTextarea.bind({});
+TextareaWithError.args = {
+  label: 'Textarea label',
+  value: '',
+  placeholder: 'Textarea placeholder',
+  rows: 8,
+  hasError: true,
+  errorMessage: 'The entered value has an error.',
+};
