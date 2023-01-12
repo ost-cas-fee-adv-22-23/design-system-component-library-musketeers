@@ -18,6 +18,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       lime: colors.lime,
+      red: '#FF0000',
       slate: {
         50: '#F8FAFC',
         100: '#F1F5F9',
@@ -67,6 +68,7 @@ module.exports = {
       18: ['18px'],
       16: ['16px'],
       14: ['14px'],
+      12: ['12px'],
     },
     lineHeight: {
       none: '1',

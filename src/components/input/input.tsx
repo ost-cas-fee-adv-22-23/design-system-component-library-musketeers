@@ -1,7 +1,8 @@
 import React, { useId } from 'react';
 import { InputType, InputProps } from './input.types';
+import Cancel from '../../components/icons/Cancel';
 
-export const Input: React.FC<InputProps> = ({ label, type = InputType.TEXT, value, onChange, placeholder, children }) => {
+export const Input: React.FC<InputProps> = ({ type = InputType.TEXT, ...props }) => {
   const id = useId();
 
   const labelBaseClasses = `label-m`;
@@ -9,8 +10,6 @@ export const Input: React.FC<InputProps> = ({ label, type = InputType.TEXT, valu
   const inputBaseClasses = [
     'w-full',
     'rounded-default',
-    'border',
-    'border-slate-200',
     'bg-slate-50',
     'p-s',
     'leading-none',
@@ -22,28 +21,47 @@ export const Input: React.FC<InputProps> = ({ label, type = InputType.TEXT, valu
     'hover:border-violet-600',
     'focus:outline-violet-600',
   ];
-  if (children) {
+  if (props.children) {
     inputBaseClasses.push('pr-xl');
   }
+  if (props.hasError) {
+    inputBaseClasses.push('border-2 border-red');
+  } else {
+    inputBaseClasses.push('border border-slate-200');
+  }
 
-  const iconBaseClasses = `block absolute right-s top-1/2 transform -translate-y-1/2 pointer-events-none text-slate-600`;
+  const errorMessageClasses = ['font-sans font-medium leading-normal text-red text-12 text-right py-xxs'];
+
+  const iconBaseClasses = [
+    'block',
+    'absolute',
+    'right-s',
+    'top-1/2',
+    'transform',
+    '-translate-y-1/2',
+    'pointer-events-none',
+    'text-slate-600',
+  ];
 
   return (
     <div>
       <label className={labelBaseClasses} htmlFor={id}>
-        {label}
+        {props.label}
       </label>
       <div className="relative">
         <input
           id={id}
-          value={value}
-          onChange={onChange}
+          value={props.value}
+          onChange={props.onChange}
           type={type}
-          placeholder={placeholder}
+          placeholder={props.placeholder}
           className={inputBaseClasses.join(' ')}
         />
-        {children && <span className={iconBaseClasses}>{children}</span>}
+        {(props.children || props.hasError) && (
+          <span className={iconBaseClasses.join(' ')}>{props.hasError ? <Cancel color="text-red" /> : props.children}</span>
+        )}
       </div>
+      {props.hasError && props.errorMessage ? <div className={errorMessageClasses.join(' ')}>{props.errorMessage}</div> : ''}
     </div>
   );
 };

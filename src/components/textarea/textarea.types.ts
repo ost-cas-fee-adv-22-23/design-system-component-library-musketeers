@@ -6,4 +6,6 @@ export type TextareaProps = {
   placeholder?: string;
   rows?: number;
   onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  hasError?: boolean;
+  errorMessage?: string;
 };

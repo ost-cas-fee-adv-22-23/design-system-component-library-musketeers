@@ -13,4 +13,6 @@ export type InputProps = {
   placeholder?: string;
   children?: ReactNode;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  hasError?: boolean;
+  errorMessage?: string;
 };
