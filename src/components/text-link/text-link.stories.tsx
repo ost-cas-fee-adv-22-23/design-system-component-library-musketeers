@@ -20,11 +20,13 @@ export default {
   },
 } as ComponentMeta<typeof TextLink>;
 
-const withSingleTextLink: ComponentStory<typeof TextLink> = (args) => {
-  return <TextLink label={args.label} href={args.href} target={args.target}></TextLink>;
+const Template: ComponentStory<typeof TextLink> = (args) => {
+  return <TextLink {...args}></TextLink>;
 };
 
-export const WithSingleTextLink: ComponentStory<typeof TextLink> = withSingleTextLink.bind({});
-WithSingleTextLink.args = {
+export const TextLinkComponent: ComponentStory<typeof TextLink> = Template.bind({});
+TextLinkComponent.args = {
   label: 'Link Label',
+  href: '',
+  target: '',
 };

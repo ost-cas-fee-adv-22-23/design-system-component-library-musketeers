@@ -15,7 +15,7 @@ export default {
   },
 } as ComponentMeta<typeof Modal>;
 
-const withSingleModal: ComponentStory<typeof Modal> = (args) => {
+const Template: ComponentStory<typeof Modal> = (args) => {
   return (
     <Modal {...args}>
       <div className="label-xl">Persönliche Einstellungen</div>
@@ -27,8 +27,8 @@ const withSingleModal: ComponentStory<typeof Modal> = (args) => {
   );
 };
 
-export const WithSingleModal: ComponentStory<typeof Modal> = withSingleModal.bind({});
-WithSingleModal.args = {
+export const ModalComponent: ComponentStory<typeof Modal> = Template.bind({});
+ModalComponent.args = {
   size: ModalSize.XL,
   header: <h3>Einstellungen</h3>,
 };
