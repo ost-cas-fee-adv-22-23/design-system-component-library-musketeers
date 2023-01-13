@@ -22,6 +22,12 @@ export default {
     placeholder: {
       control: { type: 'text' },
     },
+    hasError: {
+      control: { type: 'boolean' },
+    },
+    errorMessage: {
+      control: { type: 'text' },
+    },
   },
 } as ComponentMeta<typeof Input>;
 
