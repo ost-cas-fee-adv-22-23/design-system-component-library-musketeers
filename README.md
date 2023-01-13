@@ -77,9 +77,28 @@ module.exports = {
 }
 ```
 
-Now you are ready to use the design token from its design system.
+Now your project's Tailwind build includes the design tokens and configuration from the design system.
 
 ### Components usage
+
+#### Local Storybook installation
+
+In order to check which components and its props are available. Set up the design system locally. Clone the design system repository
+
+```git
+https://github.com/smartive-education/design-system-component-library-musketeers.git
+```
+
+Install all repository dependencies and start your local storybook instance
+
+```git
+npm install
+```
+```git
+npm run storybook
+```
+
+Your local instance will be available on: http://localhost:6006/
 
 After the setup you will be able to use all components from the design system. Import your desired component as followed.
 
@@ -91,7 +110,7 @@ Check the available components section to see which components ready for use
 
 #### Usage
 
-Now you can use the components as followed. Check the design system for the correct useage and see what props are available.
+Now you can use the components as followed. Check storybook (http://localhost:6006/ ) for the correct useage and see what props are available.
 
 ```javascript
 export default function Home() {
@@ -104,26 +123,9 @@ export default function Home() {
 }
 ```
 
-#### Available Components
-1. avatar
-2. button
-3. card
-4. container
-5. file-upload
-6. header
-7. icon-link
-8. input
-9. interaction
-10. navigation
-11. navigation-item
-12. profile-image
-13. tabs
-14. text-link
-15. textarea
-
 ### SVG Icons
 
-The design system comes with a set of svg icons. The icons are automatically generated into javascript components and can be imported as followed.
+The design system comes with a set of svg icons. The icons are manually generated into javascript components and can be imported as followed.
 
 ```javascript
 import { ArrowUp } from '@smartive-education/design-system-component-library-musketeers';
@@ -141,6 +143,11 @@ export default function Icon() {
       </>
   )
 }
+```
+If you wish to regenerate the svg components because new icons are added to the repository run following command
+
+```git
+npm run build-icons
 ```
 
 #### Available SVG Icons
