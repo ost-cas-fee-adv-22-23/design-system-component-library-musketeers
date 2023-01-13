@@ -13,11 +13,11 @@ export default {
   },
 } as ComponentMeta<typeof Hashtag>;
 
-const withSingleHashtag: ComponentStory<typeof Hashtag> = (args) => {
-  return <Hashtag onClick={args.onClick} label={args.label}></Hashtag>;
+const Template: ComponentStory<typeof Hashtag> = (args) => {
+  return <Hashtag {...args}></Hashtag>;
 };
 
-export const WithSingleHashtag: ComponentStory<typeof Hashtag> = withSingleHashtag.bind({});
-WithSingleHashtag.args = {
+export const HashtagComponent: ComponentStory<typeof Hashtag> = Template.bind({});
+HashtagComponent.args = {
   label: 'hashtagLabel',
 };

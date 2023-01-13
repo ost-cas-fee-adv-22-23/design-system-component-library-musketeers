@@ -31,7 +31,7 @@ export default {
   },
 } as ComponentMeta<typeof Input>;
 
-const withSingleInput: ComponentStory<typeof Input> = (args) => {
+const Template: ComponentStory<typeof Input> = (args) => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
@@ -45,15 +45,7 @@ const withSingleInput: ComponentStory<typeof Input> = (args) => {
   );
 };
 
-export const WithSingleInput = withSingleInput.bind({});
-WithSingleInput.args = {
-  type: InputType.TEXT,
-  label: 'Input label',
-  value: '',
-  placeholder: 'Input placeholder',
-};
-
-const inputTextWithoutIcon: ComponentStory<typeof Input> = (args) => {
+const TemplateWithoutIcon: ComponentStory<typeof Input> = (args) => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
@@ -63,16 +55,24 @@ const inputTextWithoutIcon: ComponentStory<typeof Input> = (args) => {
   return <Input {...args} value={input} onChange={(event) => setInput(event.currentTarget.value)}></Input>;
 };
 
-export const InputTextWithoutIcon = inputTextWithoutIcon.bind({});
-InputTextWithoutIcon.args = {
+export const InputComponent = Template.bind({});
+InputComponent.args = {
   type: InputType.TEXT,
   label: 'Input label',
   value: '',
   placeholder: 'Input placeholder',
 };
 
-export const InputTextWithError = withSingleInput.bind({});
-InputTextWithError.args = {
+export const InputWithoutIcon = TemplateWithoutIcon.bind({});
+InputWithoutIcon.args = {
+  type: InputType.TEXT,
+  label: 'Input label',
+  value: '',
+  placeholder: 'Input placeholder',
+};
+
+export const InputWithError = TemplateWithoutIcon.bind({});
+InputWithError.args = {
   type: InputType.TEXT,
   label: 'Input label',
   value: '',

@@ -9,16 +9,6 @@ export default {
   component: Tabs,
 } as ComponentMeta<typeof Tabs>;
 
-const withSingleTabs = () => {
-  return (
-    <Tabs>
-      <TabsItem label={'Deine Mumbels'} active={true}></TabsItem>
-      <TabsItem label={'Deine Likes'} active={false}></TabsItem>
-    </Tabs>
-  );
-};
-export const WithSingleTabs: ComponentStory<typeof Tabs> = withSingleTabs.bind({});
-
 export const TabsComponent: ComponentStory<typeof Tabs> = () => {
   const [activeTab, setActiveTab] = useState('mumbles');
 
@@ -29,5 +19,3 @@ export const TabsComponent: ComponentStory<typeof Tabs> = () => {
     </Tabs>
   );
 };
-
-TabsComponent.storyName = 'With Active Tab Interaction';

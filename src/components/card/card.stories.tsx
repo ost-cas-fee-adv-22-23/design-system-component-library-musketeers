@@ -21,9 +21,9 @@ export default {
   },
 } as ComponentMeta<typeof Card>;
 
-const withSingleCard: ComponentStory<typeof Card> = (args) => {
+const Template: ComponentStory<typeof Card> = (args) => {
   return (
-    <Card size={args.size} hasRoundBorders={args.hasRoundBorders} hasTopRoundBorders={args.hasTopRoundBorders}>
+    <Card {...args}>
       <div>
         Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non risus
         dignissim, a semper tortor ultricies. Nam commodo lacus mi, molestie malesuada mi scelerisque eu. Aenean et
@@ -34,8 +34,8 @@ const withSingleCard: ComponentStory<typeof Card> = (args) => {
   );
 };
 
-export const WithSingleCard: ComponentStory<typeof Card> = withSingleCard.bind({});
-WithSingleCard.args = {
+export const CardComponent: ComponentStory<typeof Card> = Template.bind({});
+CardComponent.args = {
   size: CardSize.XL,
   hasRoundBorders: false,
   hasTopRoundBorders: false,

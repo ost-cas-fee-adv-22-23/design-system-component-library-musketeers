@@ -13,11 +13,11 @@ export default {
   },
 } as ComponentMeta<typeof FileUpload>;
 
-const withSingleFileUpload: ComponentStory<typeof FileUpload> = (args) => {
-  return <FileUpload label={args.label} onChange={args.onChange}></FileUpload>;
+const Template: ComponentStory<typeof FileUpload> = (args) => {
+  return <FileUpload {...args}></FileUpload>;
 };
 
-export const WithSingleFileUpload: ComponentStory<typeof FileUpload> = withSingleFileUpload.bind({});
-WithSingleFileUpload.args = {
+export const FileUploadComponent: ComponentStory<typeof FileUpload> = Template.bind({});
+FileUploadComponent.args = {
   label: '... oder Datei auswählen',
 };
