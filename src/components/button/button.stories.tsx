@@ -23,13 +23,16 @@ export default {
     isIconOnly: {
       control: { type: 'boolean' },
     },
+    isFullWidth: {
+      control: { type: 'boolean' },
+    },
     showBorder: {
       control: { type: 'boolean' },
     },
   },
 } as ComponentMeta<typeof Button>;
 
-const withSingleButton: ComponentStory<typeof Button> = (args) => {
+const Template: ComponentStory<typeof Button> = (args) => {
   return (
     <Button {...args}>
       <Mumble />
@@ -37,15 +40,15 @@ const withSingleButton: ComponentStory<typeof Button> = (args) => {
   );
 };
 
-export const WithSingleButton: ComponentStory<typeof Button> = withSingleButton.bind({});
-WithSingleButton.args = {
+export const ButtonComponent: ComponentStory<typeof Button> = Template.bind({});
+ButtonComponent.args = {
   size: ButtonSize.M,
   type: ButtonType.DEFAULT,
   label: 'Button Label',
   isIconOnly: false,
 };
 
-export const ButtonDefault: ComponentStory<typeof Button> = withSingleButton.bind({});
+export const ButtonDefault: ComponentStory<typeof Button> = Template.bind({});
 ButtonDefault.args = {
   size: ButtonSize.M,
   type: ButtonType.DEFAULT,
@@ -53,7 +56,7 @@ ButtonDefault.args = {
   isIconOnly: false,
 };
 
-export const ButtonViolet: ComponentStory<typeof Button> = withSingleButton.bind({});
+export const ButtonViolet: ComponentStory<typeof Button> = Template.bind({});
 ButtonViolet.args = {
   size: ButtonSize.M,
   type: ButtonType.VIOLET,
@@ -61,7 +64,7 @@ ButtonViolet.args = {
   isIconOnly: false,
 };
 
-export const ButtonGradient: ComponentStory<typeof Button> = withSingleButton.bind({});
+export const ButtonGradient: ComponentStory<typeof Button> = Template.bind({});
 ButtonGradient.args = {
   size: ButtonSize.M,
   type: ButtonType.GRADIENT,
@@ -69,7 +72,7 @@ ButtonGradient.args = {
   isIconOnly: false,
 };
 
-export const ButtonGrey: ComponentStory<typeof Button> = withSingleButton.bind({});
+export const ButtonGrey: ComponentStory<typeof Button> = Template.bind({});
 ButtonGrey.args = {
   size: ButtonSize.M,
   type: ButtonType.GREY,
@@ -77,11 +80,18 @@ ButtonGrey.args = {
   isIconOnly: false,
 };
 
-export const ButtonVioletFullWidth: ComponentStory<typeof Button> = withSingleButton.bind({});
+export const ButtonVioletFullWidth: ComponentStory<typeof Button> = Template.bind({});
 ButtonVioletFullWidth.args = {
   size: ButtonSize.M,
   type: ButtonType.VIOLET,
   label: 'Button Label',
   isIconOnly: false,
+  isFullWidth: true,
+};
+
+export const ButtonIconOnly: ComponentStory<typeof Button> = Template.bind({});
+ButtonIconOnly.args = {
+  size: ButtonSize.M,
+  isIconOnly: true,
   isFullWidth: true,
 };

@@ -19,10 +19,16 @@ export default {
     rows: {
       control: { type: 'number' },
     },
+    hasError: {
+      control: { type: 'boolean' },
+    },
+    errorMessage: {
+      control: { type: 'text' },
+    },
   },
 } as ComponentMeta<typeof Textarea>;
 
-const withSingleTextarea: ComponentStory<typeof Textarea> = (args) => {
+const Template: ComponentStory<typeof Textarea> = (args) => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
@@ -32,15 +38,15 @@ const withSingleTextarea: ComponentStory<typeof Textarea> = (args) => {
   return <Textarea {...args} value={input} onChange={(event) => setInput(event.currentTarget.value)}></Textarea>;
 };
 
-export const WithSingleTextarea = withSingleTextarea.bind({});
-WithSingleTextarea.args = {
+export const TextareaComponent = Template.bind({});
+TextareaComponent.args = {
   label: 'Textarea label',
   value: '',
   placeholder: 'Textarea placeholder',
   rows: 8,
 };
 
-export const TextareaWithError = withSingleTextarea.bind({});
+export const TextareaWithError = Template.bind({});
 TextareaWithError.args = {
   label: 'Textarea label',
   value: '',

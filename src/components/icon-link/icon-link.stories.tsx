@@ -26,7 +26,7 @@ export default {
   },
 } as ComponentMeta<typeof IconLink>;
 
-const withSingleIconLink: ComponentStory<typeof IconLink> = (args) => {
+const Template: ComponentStory<typeof IconLink> = (args) => {
   return (
     <IconLink {...args}>
       <Profile />
@@ -34,8 +34,8 @@ const withSingleIconLink: ComponentStory<typeof IconLink> = (args) => {
   );
 };
 
-export const WithSingleIconLink: ComponentStory<typeof IconLink> = withSingleIconLink.bind({});
-WithSingleIconLink.args = {
+export const IconLinkComponent: ComponentStory<typeof IconLink> = Template.bind({});
+IconLinkComponent.args = {
   type: IconLinkType.VIOLET,
   label: 'Username',
 };

@@ -20,7 +20,7 @@ export default {
   component: Tweet,
 } as ComponentMeta<typeof Tweet>;
 
-const withSingleTweet: ComponentStory<typeof Tweet> = (args) => {
+const Template: ComponentStory<typeof Tweet> = (args) => {
   return (
     <div className="bg-slate-400 p-xl">
       <Container>
@@ -59,8 +59,8 @@ const withSingleTweet: ComponentStory<typeof Tweet> = (args) => {
   );
 };
 
-export const WithSingleTweet: ComponentStory<typeof Tweet> = withSingleTweet.bind({});
-WithSingleTweet.args = {
+export const TweetComponent: ComponentStory<typeof Tweet> = Template.bind({});
+TweetComponent.args = {
   displayName: 'Hans Muster',
   userName: 'hansmuster',
   timestamp: 'timestamp',
@@ -88,7 +88,7 @@ WithSingleTweet.args = {
   onClickTimestamp: (event) => event,
 };
 
-const tweetWithImage: ComponentStory<typeof Tweet> = (args) => {
+const TemplateWithImage: ComponentStory<typeof Tweet> = (args) => {
   return (
     <div className="bg-slate-400 p-xl">
       <Container>
@@ -132,7 +132,7 @@ const tweetWithImage: ComponentStory<typeof Tweet> = (args) => {
   );
 };
 
-export const TweetWithImage: ComponentStory<typeof Tweet> = tweetWithImage.bind({});
+export const TweetWithImage: ComponentStory<typeof Tweet> = TemplateWithImage.bind({});
 TweetWithImage.args = {
   displayName: 'Hans Muster',
   userName: 'hansmuster',

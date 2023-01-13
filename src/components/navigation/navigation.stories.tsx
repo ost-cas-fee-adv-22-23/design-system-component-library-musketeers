@@ -8,7 +8,7 @@ export default {
   component: Navigation,
 } as ComponentMeta<typeof Navigation>;
 
-const withSingleNavigation: ComponentStory<typeof Navigation> = (args) => {
+const Template: ComponentStory<typeof Navigation> = (args) => {
   return (
     <div className="bg-slate-400">
       <Navigation {...args}></Navigation>
@@ -16,4 +16,4 @@ const withSingleNavigation: ComponentStory<typeof Navigation> = (args) => {
   );
 };
 
-export const WithSingleNavigation: ComponentStory<typeof Navigation> = withSingleNavigation.bind({});
+export const NavigationComponent: ComponentStory<typeof Navigation> = Template.bind({});

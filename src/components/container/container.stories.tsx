@@ -8,7 +8,7 @@ export default {
   component: Container,
 } as ComponentMeta<typeof Container>;
 
-const withSingleContainer: ComponentStory<typeof Container> = () => {
+const Template: ComponentStory<typeof Container> = () => {
   return (
     <div className="bg-violet-700">
       <Container>
@@ -20,4 +20,4 @@ const withSingleContainer: ComponentStory<typeof Container> = () => {
   );
 };
 
-export const WithSingleContainer: ComponentStory<typeof Container> = withSingleContainer.bind({});
+export const ContainerComponent: ComponentStory<typeof Container> = Template.bind({});

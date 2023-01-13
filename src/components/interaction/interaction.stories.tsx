@@ -23,17 +23,17 @@ export default {
   },
 } as ComponentMeta<typeof Interaction>;
 
-const withSingleInteraction: ComponentStory<typeof Interaction> = (args) => {
+const Template: ComponentStory<typeof Interaction> = (args) => {
   return (
-    <Interaction type={args.type} active={args.active} onClick={args.onClick}>
+    <Interaction {...args}>
       <Mumble />
       Copy link
     </Interaction>
   );
 };
 
-export const WithSingleInteraction: ComponentStory<typeof Interaction> = withSingleInteraction.bind({});
-WithSingleInteraction.args = {
+export const InteractionComponent: ComponentStory<typeof Interaction> = Template.bind({});
+InteractionComponent.args = {
   type: InteractionType.DEFAULT,
   active: false,
 };

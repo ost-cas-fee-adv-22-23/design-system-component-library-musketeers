@@ -12,10 +12,147 @@ The latest published Storybook version is available here: https://smartive-educa
 ## How To Use The Library In Your React/Next.js Project
 
 ### Package Installation
+In order to make use of this design system you have to follow these setup steps.
+
+### 1. Design System installation
+
+Before we can install the design system package we need to make sure we have the correct authentication setup in order to access the repository.
+
+Setup a .npmrc file in the root of your repository and paste following lines into it.
+
+Replace the {{TOKEN}} with your personal token.
+
+```bash
+@smartive-education:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken={{TOKEN}}
+```
+
+This will make the design system available in your repository
+
+```bash
+npm install @smartive-education/design-system-component-library-musketeers
+```
+
+### 2. Tailwind, Postcss & Autoprefixer installation
+
+The design system is based on tailwind-css and post-css, so in order to make the system work we need to install these packages and set it up properly. 
+
+The tailwind configuration will be described in the next section.
+
+Installs the necessary packages
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+Sets up tailwind css and generates tailwind.config.js and postcss.config.js
+
+```bash
+npx tailwindcss init -p
+```
+
+Head to "Tailwind Configuration" section to continue the setup.
 
 ### Tailwind Configuration
 
+Since all packages and configuration files are now available we need to load the design system config as a preset into the repository in order to make the design tokens available.
+
+In order to apply the design tokens to our system we need also to specify the content path to our components in the libary.
+
+#### tailwind.config.js
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  presets: [
+      // Loads design tokens as presets
+    require('@smartive-education/design-system-component-library-musketeers/preset')
+  ],
+  content: [
+      // Specifies content path to our design system components in order to apply design tokens
+    './node_modules/@smartive-education/design-system-component-library-musketeers/dist/components/**/*.js',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+}
+```
+
+Now your project's Tailwind build includes the design tokens and configuration from the design system.
+
+### Components usage
+
+#### Local Storybook installation
+
+In order to check which components and its props are available. Set up the design system locally. Clone the design system repository
+
+```git
+https://github.com/smartive-education/design-system-component-library-musketeers.git
+```
+
+Install all repository dependencies and start your local storybook instance
+
+```git
+npm install
+```
+```git
+npm run storybook
+```
+
+Your local instance will be available on: http://localhost:6006/
+
+After the setup you will be able to use all components from the design system. Import your desired component as followed.
+
+```javascript
+import { Component } from '@smartive-education/design-system-component-library-musketeers';
+```
+
+Check the available components section to see which components ready for use
+
+#### Usage
+
+Now you can use the components as followed. Check storybook (http://localhost:6006/ ) for the correct useage and see what props are available.
+
+```javascript
+export default function Home() {
+  return (
+      <>
+        <Component></Component>
+        ...
+      </>
+  )
+}
+```
+
 ### SVG Icons
+
+The design system comes with a set of svg icons. The icons are manually generated into javascript components and can be imported as followed.
+
+```javascript
+import { ArrowUp } from '@smartive-education/design-system-component-library-musketeers';
+```
+
+The icon name is also the component name and can be used for the import. Here is an example:
+
+```javascript
+import { ArrowUp } from '@smartive-education/design-system-component-library-musketeers';
+
+export default function Icon() {
+  return (
+      <>
+        <ArrowUp />
+      </>
+  )
+}
+```
+If you wish to regenerate the svg components because new icons are added to the repository run following command
+
+```git
+npm run build-icons
+```
+
+#### Available SVG Icons
+
+![alt icons](./documentation/images/icons.png)
 
 ## Project Development History and Learnings
 

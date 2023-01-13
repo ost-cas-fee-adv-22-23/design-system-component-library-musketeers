@@ -10,18 +10,16 @@ export default {
   component: Header,
 } as ComponentMeta<typeof Header>;
 
-const withSingleHeader: ComponentStory<typeof Header> = (args) => {
+const Template: ComponentStory<typeof Header> = (args) => {
   return <Header {...args}></Header>;
 };
 
-export const WithSingleHeader: ComponentStory<typeof Header> = withSingleHeader.bind({});
+export const HeaderComponent: ComponentStory<typeof Header> = Template.bind({});
 
-const withNavigationComponent: ComponentStory<typeof Header> = (args) => {
+export const HeaderWithNavigation: ComponentStory<typeof Header> = (args) => {
   return (
     <Header {...args}>
       <Navigation />
     </Header>
   );
 };
-
-export const WithNavigationComponent: ComponentStory<typeof Header> = withNavigationComponent.bind({});
