@@ -79,7 +79,7 @@ module.exports = {
 
 Lastly we need to inject tailwind's base, components and utility classes to our repository.
 
-The easiest way to use the tailwind configuration and utility classes from the Design System, is to import it's main.css into your applications main entry point CSS file. (For a next.js application as example, this is the global.css.
+The easiest way to use the tailwind configuration and utility classes from the Design System, is to import it's main.css into your applications main entry point CSS file. ( For a next.js application as example, this is the global.css. )
 
 This will also load our custom typography classes into your repository. For further information check out the main.css file.
 
