@@ -19,13 +19,14 @@
   },
   "scripts": {
     "build": "rm -rf dist && yes | npm run build-icons && tsc && npm run copy-tailwind-preset && npm run copy-main-css",
-    "build-icons": "npx @svgr/cli@5.5.0 --config-file \".svgrrc.js\" --out-dir ./src/components/icons -- ./src/assets/icons",
+    "build-icons": "npx @svgr/cli@5.5.0 --config-file \".svgrrc.js\" --out-dir ./src/components/icons -- ./src/assets/icons && npm run lint:fix:icons:index",
     "copy-tailwind-preset": "cp ./tailwind-preset-config-musketeers.js dist",
     "copy-main-css": "cp ./src/main.css dist",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint src/components",
-    "lint:fix": "eslint src/components --fix"
+    "lint:fix": "eslint src/components --fix",
+    "lint:fix:icons:index": "eslint src/components/icons/index.js --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",

@@ -44,7 +44,9 @@ export const HeaderWithNavigation: ComponentStory<typeof Header> = (args) => {
             alert('Settings clicked!');
           }}
         >
-          <Settings width="16" height="16" />
+          <span className="animation-svg-settings">
+            <Settings width="16" height="16" />
+          </span>
         </NavigationItem>
         <NavigationItem
           label="Logout"
@@ -52,7 +54,9 @@ export const HeaderWithNavigation: ComponentStory<typeof Header> = (args) => {
             alert('LogOut clicked!');
           }}
         >
-          <LogOut width="16" height="16" />
+          <span className="animation-svg-logout">
+            <LogOut width="16" height="16" />
+          </span>
         </NavigationItem>
       </Navigation>
     </Header>

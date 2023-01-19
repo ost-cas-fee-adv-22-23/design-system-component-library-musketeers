@@ -6,6 +6,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Avatar } from '../avatar/avatar';
 import { AvatarSize } from '../avatar/avatar.types';
 import Settings from '../../components/icons/Settings';
+import LogOut from '../../components/icons/LogOut';
 
 export default {
   title: `${StorybookMeta.COMPONENTS}/NavigationItem`,
@@ -62,7 +63,9 @@ const TemplateWithIcon: ComponentStory<typeof NavigationItem> = (args) => {
   return (
     <div className="bg-violet-700 p-s">
       <NavigationItem {...args}>
-        <Settings width="16" height="16" />
+        <span className="animation-svg-settings">
+          <Settings width="16" height="16" />
+        </span>
       </NavigationItem>
     </div>
   );
@@ -73,6 +76,30 @@ NavigationItemWithIcon.args = {
   label: 'Item Label',
 };
 NavigationItemWithIcon.parameters = {
+  docs: {
+    description: {
+      story: 'Demo usage with an [Icon](http://localhost:6006/?path=/docs/foundations-icons--page)',
+    },
+  },
+};
+
+const TemplateWithLogOutIcon: ComponentStory<typeof NavigationItem> = (args) => {
+  return (
+    <div className="bg-violet-700 p-s">
+      <NavigationItem {...args}>
+        <span className="animation-svg-logout">
+          <LogOut width="16" height="16" />
+        </span>
+      </NavigationItem>
+    </div>
+  );
+};
+
+export const NavigationItemWithLogOutIcon: ComponentStory<typeof NavigationItem> = TemplateWithLogOutIcon.bind({});
+NavigationItemWithLogOutIcon.args = {
+  label: 'Log Out',
+};
+NavigationItemWithLogOutIcon.parameters = {
   docs: {
     description: {
       story: 'Demo usage with an [Icon](http://localhost:6006/?path=/docs/foundations-icons--page)',

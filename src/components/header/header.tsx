@@ -6,7 +6,7 @@ import { Container } from '../container/container';
 export const Header: React.FC<HeaderProps> = (props) => {
   const headerBaseClasses = 'bg-violet-700 h-20';
   const innerBaseClasses = 'h-20 flex items-center place-content-between';
-  const logoWrapperClasses = 'w-52';
+  const logoWrapperClasses = 'w-52 hover:scale-105 transition';
 
   const onClickLogoHandler = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
