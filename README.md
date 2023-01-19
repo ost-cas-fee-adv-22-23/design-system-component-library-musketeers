@@ -77,6 +77,15 @@ module.exports = {
 }
 ```
 
+Lastly we need to inject tailwind's base, components and utility classes to our repository. In order to achieve that head to your global css file. For a next.js application it's going to be the 'global.css' file.
+
+This will also load our custom typography classes into your repository. For further information check out the main.css file.
+
+#### global.css
+```css
+@import '@smartive-education/design-system-component-library-musketeers/main';
+```
+
 Now your project's Tailwind build includes the design tokens and configuration from the design system.
 
 ### Components usage
