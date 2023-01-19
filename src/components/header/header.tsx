@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { HeaderProps } from './header.types';
 
 import { Container } from '../container/container';
 
-export const Header: React.FC<HeaderProps> = ({ children }) => {
+export const Header: React.FC<HeaderProps> = (props) => {
+  const headerBaseClasses = 'bg-violet-700 h-20';
+  const innerBaseClasses = 'h-20 flex items-center place-content-between';
+  const logoWrapperClasses = 'w-52';
+
+  const onClickLogoHandler = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    props.onClickLogo(event);
+  };
+
   return (
-    <header className="bg-violet-700 h-20">
+    <header className={headerBaseClasses}>
       <Container>
-        <div className="h-20 flex items-center place-content-between">
-          <div className="w-52">
-            <a href="">
+        <div className={innerBaseClasses}>
+          <div className={logoWrapperClasses}>
+            <a href="" onClick={onClickLogoHandler}>
               <svg
                 className="block max-w-full height-auto"
                 width="335"
@@ -65,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
               </svg>
             </a>
           </div>
-          <div>{children}</div>
+          <div>{props.children}</div>
         </div>
       </Container>
     </header>
