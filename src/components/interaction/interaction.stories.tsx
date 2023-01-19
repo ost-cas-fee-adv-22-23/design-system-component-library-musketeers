@@ -24,10 +24,12 @@ export default {
 } as ComponentMeta<typeof Interaction>;
 
 const Template: ComponentStory<typeof Interaction> = (args) => {
+  const [copied, setCopied] = useState(false);
+
   return (
-    <Interaction {...args}>
+    <Interaction {...args} onClick={() => setCopied((c) => !c)}>
       <Mumble />
-      Copy link
+      {copied ? 'Link copied' : 'Copy link'}
     </Interaction>
   );
 };
