@@ -83,6 +83,18 @@ export const FileDragAndDrop: React.FC<FileDragAndDropProps> = ({
     }));
   };
 
+  const baseClasses = ['border-2 border-dotted border-slate-200 rounded-16 mb-4 p-xxl'];
+  const fieldClasses = ['flex flex-col justify-center items-center truncate'];
+  const headingClasses = 'heading-4 text-slate-500 mb-xs';
+  const paragraphClasses = 'paragraph-m text-slate-400';
+  const errorClasses = 'text-right text-red text-12';
+
+  if (fileInputState.isOverDragArea) {
+    baseClasses.push('bg-slate-300');
+  } else {
+    baseClasses.push('bg-slate-100');
+  }
+
   return (
     <div>
       <div
@@ -90,28 +102,24 @@ export const FileDragAndDrop: React.FC<FileDragAndDropProps> = ({
         onDragOver={handleDragEnter}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
-        className={`border-2 border-dotted border-slate-200 rounded-16 mb-4 p-xxl ${
-          fileInputState.isOverDragArea ? 'bg-slate-300' : 'bg-slate-100'
-        }`}
+        className={baseClasses.join(' ')}
       >
         {!fileInputState.isFileSelected ? (
-          <div className="flex flex-col items-center">
-            <div className="mb-xs">
+          <div className={fieldClasses.join(' ')}>
+            <span className="mb-xs">
               <Upload color="text-slate-500" width={30} height={30} />
-            </div>
-            <h4 className="label-xl text-slate-500 mb-xs">{props.title}</h4>
-            <p className="paragraph-m text-slate-400">{props.restrictions}</p>
+            </span>
+            <h4 className={headingClasses}>{props.title}</h4>
+            <p className={paragraphClasses}>{props.restrictions}</p>
           </div>
         ) : (
-          <div className="flex flex-col justify-center items-center truncate">
-            <div className="rounded-lg bg-slate-300 pt-4 px-2 pb-2 mb-2">
-              <Checkmark color="text-slate-600" width={30} height={30} />
-            </div>
-            <p className="text-slate-600 text-center">{`${fileInputState.fileName} wurde hinzugefügt`}</p>
+          <div className={fieldClasses.join(' ')}>
+            <Checkmark color="text-slate-500" width={30} height={30} />
+            <p className={paragraphClasses}>{`${fileInputState.fileName} wurde hinzugefügt`}</p>
           </div>
         )}
       </div>
-      <div className="text-right text-red text-12">{fileInputState.errorMessage}</div>
+      <div className={errorClasses}>{fileInputState.errorMessage}</div>
     </div>
   );
 };

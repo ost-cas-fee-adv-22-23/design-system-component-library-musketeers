@@ -40,9 +40,9 @@ The icons will use the cascading currentColor from parent elements. Tailwind's "
 
 ## Example
 
-`import Calendar from "../components/icons/Calendar";`<br/>
-`...`<br/>
-`<Calendar color="text-violet-600" width="50" height="50" />`
+    import Calendar from "../components/icons/Calendar";
+    ...
+    <Calendar color="text-violet-600" width="50" height="50" />
 
 <Calendar color="text-violet-600" width="50" height="50" />
 
@@ -125,3 +125,38 @@ The icons will use the cascading currentColor from parent elements. Tailwind's "
   </IconItem>
 
 </IconGallery>
+
+## Icon Animations
+
+SVG Icon animations are handled by Tailwind's usual animation helpers. You can use the same animation for multiple icons, or define special animations for certain use cases.
+There are extendible, existing animation classes available in src/main.css
+This way it's possible to handle more sophisticated SVG animations and target children elements via CSS.
+
+### CSS Animation Example
+
+    main.css
+    ...
+    @layer utilities {
+        .animation-svg-settings {
+            @apply group-hover:rotate-90;
+            @apply duration-300;
+        }
+
+        .animation-svg-logout svg g path:nth-child(1) {
+            @apply -translate-x-[2px];
+            @apply group-hover:translate-x-[2px];
+            @apply duration-300;
+        }
+    }
+
+### Component Animation Use Example
+
+    import LogOut from "../components/icons/LogOut"
+    ...
+    <div className="group">
+        <span className="animation-svg-logout">
+            <Calendar color="text-violet-600" width="50" height="50" />
+        </span>
+    </div>
+
+You will find examples for animated Icons in the [Header](http://localhost:6006/?path=/docs/components-header--header-component) or [Navigation](http://localhost:6006/?path=/docs/components-navigation--navigation-component).
