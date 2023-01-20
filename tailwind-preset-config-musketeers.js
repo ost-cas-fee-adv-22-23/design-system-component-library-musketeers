@@ -92,6 +92,10 @@ module.exports = {
       borderWidth: {
         6: '6px',
       },
+      outlineWidth: {
+        3: '3px',
+        6: '6px',
+      },
       spacing: {
         xxs: '4px',
         xs: '8px',

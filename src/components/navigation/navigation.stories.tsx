@@ -37,7 +37,9 @@ const Template: ComponentStory<typeof Navigation> = (args) => {
             alert('Settings clicked!');
           }}
         >
-          <Settings width="16" height="16" />
+          <span className="animation-svg-settings">
+            <Settings width="16" height="16" />
+          </span>
         </NavigationItem>
         <NavigationItem
           label="Logout"
@@ -45,7 +47,9 @@ const Template: ComponentStory<typeof Navigation> = (args) => {
             alert('Logout clicked!');
           }}
         >
-          <LogOut width="16" height="16" />
+          <span className="animation-svg-logout">
+            <LogOut width="16" height="16" />
+          </span>
         </NavigationItem>
       </Navigation>
     </div>
