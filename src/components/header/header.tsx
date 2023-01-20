@@ -7,6 +7,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   const headerBaseClasses = 'bg-violet-700 h-20';
   const innerBaseClasses = 'h-20 flex items-center place-content-between';
   const logoWrapperClasses = 'w-52 hover:scale-105 transition';
+  const svgClasses = 'block max-w-full height-auto';
 
   const onClickLogoHandler = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -20,7 +21,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <div className={logoWrapperClasses}>
             <a href="" onClick={onClickLogoHandler}>
               <svg
-                className="block max-w-full height-auto"
+                className={svgClasses}
                 width="335"
                 height="64"
                 viewBox="0 0 335 64"
