@@ -29,6 +29,9 @@ export default {
       control: { type: 'text' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a Text Input field. An Icon can be passed in via children. (Optional) See the examples below including error styles.`,
+  },
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => {

@@ -14,6 +14,9 @@ import LogOut from '../../components/icons/LogOut';
 export default {
   title: `${StorybookMeta.COMPONENTS}/Header`,
   component: Header,
+  parameters: {
+    componentSubtitle: `Renders a Header component, including the Mumble Logo and click handler. Children are used for filling the navigation area to the right. Usually, the NavigationItem component is used here. (See examples below)`,
+  },
 } as ComponentMeta<typeof Header>;
 
 const Template: ComponentStory<typeof Header> = (args) => {

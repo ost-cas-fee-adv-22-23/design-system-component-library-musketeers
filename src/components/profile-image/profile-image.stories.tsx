@@ -6,6 +6,9 @@ import { ProfileImage } from './profile-image';
 export default {
   title: `${StorybookMeta.COMPONENTS}/ProfileImage`,
   component: ProfileImage,
+  parameters: {
+    componentSubtitle: `Renders a ProfileImage Component. This component uses the Avatar component internally and adds the edit button with click handler.`,
+  },
 } as ComponentMeta<typeof ProfileImage>;
 
 const Template: ComponentStory<typeof ProfileImage> = (args) => {

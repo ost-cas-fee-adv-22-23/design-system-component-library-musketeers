@@ -13,6 +13,9 @@ export default {
       control: { type: 'select' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a Modal Component. JSX for the header slot can be passed in. Children are used to fill the content. The Cancel and Save buttons with handlers are included.`,
+  },
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => {

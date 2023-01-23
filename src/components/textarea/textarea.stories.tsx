@@ -26,6 +26,9 @@ export default {
       control: { type: 'text' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a Textarea field. See the examples below including error styles.`,
+  },
 } as ComponentMeta<typeof Textarea>;
 
 const Template: ComponentStory<typeof Textarea> = (args) => {

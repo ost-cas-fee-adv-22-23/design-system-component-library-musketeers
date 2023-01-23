@@ -11,6 +11,9 @@ import LogOut from '../../components/icons/LogOut';
 export default {
   title: `${StorybookMeta.COMPONENTS}/NavigationItem`,
   component: NavigationItem,
+  parameters: {
+    componentSubtitle: `Renders a NavigationItem component.`,
+  },
 } as ComponentMeta<typeof NavigationItem>;
 
 const Template: ComponentStory<typeof NavigationItem> = (args) => {

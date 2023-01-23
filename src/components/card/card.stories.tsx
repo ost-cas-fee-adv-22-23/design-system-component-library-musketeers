@@ -19,6 +19,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
+  parameters: {
+    componentSubtitle: `Displays a configurable Card. Children elements will be used for the Card's content.`,
+  },
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => {
