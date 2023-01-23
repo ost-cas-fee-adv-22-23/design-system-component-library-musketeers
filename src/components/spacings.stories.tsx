@@ -2,6 +2,9 @@ import React from 'react';
 
 export default {
   title: `Foundations/Spacings`,
+  parameters: {
+    componentSubtitle: `For Spacings in general, a Design Token with T-Shirt Sizes is available for use. See the options below.`,
+  },
 };
 
 const spacings = () => (
