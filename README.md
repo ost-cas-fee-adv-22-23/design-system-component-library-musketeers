@@ -12,6 +12,7 @@ The latest published Storybook version is available here: https://smartive-educa
 ## How To Use The Library In Your React/Next.js Project
 
 ### Package Installation
+
 In order to make use of this design system you have to follow these setup steps.
 
 ### 1. Design System installation
@@ -35,7 +36,7 @@ npm install @smartive-education/design-system-component-library-musketeers
 
 ### 2. Tailwind, Postcss & Autoprefixer installation
 
-The design system is based on tailwind-css and post-css, so in order to make the system work we need to install these packages and set it up properly. 
+The design system is based on tailwind-css and post-css, so in order to make the system work we need to install these packages and set it up properly.
 
 The tailwind configuration will be described in the next section.
 
@@ -65,16 +66,16 @@ In order to apply the design tokens to our system we need also to specify the co
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [
-      // Loads design tokens as presets
-    require('@smartive-education/design-system-component-library-musketeers/preset')
+    // Loads design tokens as presets
+    require('@smartive-education/design-system-component-library-musketeers/preset'),
   ],
   content: [
-      // Specifies content path to our design system components in order to apply design tokens
+    // Specifies content path to our design system components in order to apply design tokens
     './node_modules/@smartive-education/design-system-component-library-musketeers/dist/components/**/*.js',
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
-}
+};
 ```
 
 Lastly we need to inject tailwind's base, components and utility classes to our repository.
@@ -84,6 +85,7 @@ The easiest way to use the tailwind configuration and utility classes from the D
 This will also load our custom typography classes into your repository. For further information check out the main.css file.
 
 #### global.css
+
 ```css
 @import '@smartive-education/design-system-component-library-musketeers/main';
 ```
@@ -105,6 +107,7 @@ Install all repository dependencies and start your local storybook instance
 ```git
 npm install
 ```
+
 ```git
 npm run storybook
 ```
@@ -126,11 +129,11 @@ Now you can use the components as followed. Check storybook (http://localhost:60
 ```javascript
 export default function Home() {
   return (
-      <>
-        <Component></Component>
-        ...
-      </>
-  )
+    <>
+      <Component></Component>
+      ...
+    </>
+  );
 }
 ```
 
@@ -149,12 +152,13 @@ import { ArrowUp } from '@smartive-education/design-system-component-library-mus
 
 export default function Icon() {
   return (
-      <>
-        <ArrowUp />
-      </>
-  )
+    <>
+      <ArrowUp />
+    </>
+  );
 }
 ```
+
 If you wish to regenerate the svg components because new icons are added to the repository run following command
 
 ```git
@@ -214,3 +218,154 @@ Checkout the release notes here: https://github.com/smartive-education/design-sy
   - Storybook provides some nice helpers for MDX pages
   - We tried to use it as far as possible, as example for the Icons and Colours
   - The issue with this is, that Tailwind CSS classes gets overridden by scoped Storybook styles on MDX pages. So for some pages, like Typography, we needed to stick with the component page setting, even if it's not a documentation page for a component
+
+## Build a Tweet/Mumble Component with next.js example
+
+This is a complete source code example for a finished next.js Tweet component, using components from this Design System:
+import { useEffect, useState } from "react";
+
+      import {
+        Card,
+        Hashtag,
+        Interaction,
+        Avatar,
+        Container,
+        IconLink,
+      } from "@smartive-education/design-system-component-library-musketeers";
+
+      import {
+        AvatarSize,
+        InteractionType,
+        IconLinkType,
+        CardSize,
+      } from "@smartive-education/design-system-component-library-musketeers";
+
+      import {
+        ReplyFilled,
+        Reply,
+        Share,
+        Heart,
+        HeartFilled,
+        Profile,
+        Time,
+      } from "@smartive-education/design-system-component-library-musketeers";
+
+      export default function Home() {
+        const [commented, setCommented] = useState(false);
+        const [comments, setComments] = useState(0);
+        const [liked, setLiked] = useState(false);
+        const [likes, setLikes] = useState(0);
+
+        useEffect(() => {
+          setComments(0);
+          setCommented(false);
+        }, []);
+
+        useEffect(() => {
+          if (commented) {
+            setComments(comments + 1);
+          }
+        }, [commented, comments]);
+
+        useEffect(() => {
+          setLikes(0);
+          setLiked(false);
+        }, []);
+
+        useEffect(() => {
+          if (liked) {
+            setLikes(likes + 1);
+          }
+        }, [liked, likes]);
+
+        return (
+          <>
+            <Container>
+              <Card size={CardSize.XL} hasRoundBorders={true}>
+                <div className="relative">
+                  <div className="absolute -top-s -left-[80px]">
+                    <Avatar
+                      alt="Display Name @displayName"
+                      showBorder
+                      size={AvatarSize.M}
+                      src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
+                    />
+                  </div>
+
+                  <div className="label-xl text-slate-900 mb-xxs">Hans Muster</div>
+
+                  <div className="flex gap-s">
+                    <IconLink
+                      type={IconLinkType.VIOLET}
+                      label="Hans Muster"
+                      href=""
+                      target=""
+                      onClick={() => {}}
+                    >
+                      <Profile />
+                    </IconLink>
+                    <IconLink
+                      type={IconLinkType.DEFAULT}
+                      label="22.02.1978"
+                      href=""
+                      target=""
+                      onClick={() => {}}
+                    >
+                      <Time />
+                    </IconLink>
+                  </div>
+
+                  <div className="paragraph-l text-slate-900 grid pt-m gap-m">
+                    <div>
+                      Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam
+                      eget ultricies ipsum. Quisque rutrum orci non risus dignissim, a
+                      semper tortor ultricies. Nam commodo lacus mi, molestie
+                      malesuada mi scelerisque eu. Aenean et pellentesque lectus, in
+                      iaculis sem. In ac efficitur lectus. Quisque consectetur est
+                      libero, eu sagittis magna vestibulum a. Etiam consectetur
+                      lobortis ipsum et bibendum. Maecenas id purus quam.
+                    </div>
+                    <div className="flex gap-xs">
+                      <Hashtag
+                        label="myhashtag"
+                        onClick={() => {
+                          alert("Hashtag clicked!");
+                        }}
+                      />
+                      <Hashtag
+                        label="myhashtag2"
+                        onClick={() => {
+                          alert("Hashtag2 clicked!");
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="py-m flex gap-s">
+                    <Interaction
+                      type={InteractionType.VIOLET}
+                      active={commented}
+                      onClick={() => setCommented((c) => !c)}
+                    >
+                      {commented ? <ReplyFilled /> : <Reply />}
+                      {comments > 0 ? `${comments} Comments` : "Comment"}
+                    </Interaction>
+                    <Interaction
+                      type={InteractionType.PINK}
+                      active={liked}
+                      onClick={() => setLiked((l) => !l)}
+                    >
+                      {liked ? <HeartFilled /> : <Heart />}
+                      {likes > 0 ? `${likes} Likes` : liked ? "Liked" : "Like"}
+                    </Interaction>
+                    <Interaction onClick={() => {}} type={InteractionType.DEFAULT}>
+                      <Share />
+                      Copy link
+                    </Interaction>
+                  </div>
+                </div>
+              </Card>
+            </Container>
+          </>
+        );
+      }
