@@ -222,150 +222,130 @@ Checkout the release notes here: https://github.com/smartive-education/design-sy
 ## Build a Tweet/Mumble Component with next.js example
 
 This is a complete source code example for a finished next.js Tweet component, using components from this Design System:
-import { useEffect, useState } from "react";
 
-      import {
-        Card,
-        Hashtag,
-        Interaction,
-        Avatar,
-        Container,
-        IconLink,
-      } from "@smartive-education/design-system-component-library-musketeers";
+```typescript
+import { useEffect, useState } from 'react';
 
-      import {
-        AvatarSize,
-        InteractionType,
-        IconLinkType,
-        CardSize,
-      } from "@smartive-education/design-system-component-library-musketeers";
+import {
+  Card,
+  Hashtag,
+  Interaction,
+  Avatar,
+  Container,
+  IconLink,
+} from '@smartive-education/design-system-component-library-musketeers';
 
-      import {
-        ReplyFilled,
-        Reply,
-        Share,
-        Heart,
-        HeartFilled,
-        Profile,
-        Time,
-      } from "@smartive-education/design-system-component-library-musketeers";
+import {
+  AvatarSize,
+  InteractionType,
+  IconLinkType,
+  CardSize,
+} from '@smartive-education/design-system-component-library-musketeers';
 
-      export default function Home() {
-        const [commented, setCommented] = useState(false);
-        const [comments, setComments] = useState(0);
-        const [liked, setLiked] = useState(false);
-        const [likes, setLikes] = useState(0);
+import {
+  ReplyFilled,
+  Reply,
+  Share,
+  Heart,
+  HeartFilled,
+  Profile,
+  Time,
+} from '@smartive-education/design-system-component-library-musketeers';
 
-        useEffect(() => {
-          setComments(0);
-          setCommented(false);
-        }, []);
+export default function Home() {
+  const [commented, setCommented] = useState(false);
+  const [comments, setComments] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(0);
 
-        useEffect(() => {
-          if (commented) {
-            setComments(comments + 1);
-          }
-        }, [commented, comments]);
+  useEffect(() => {
+    setComments(0);
+    setCommented(false);
+  }, []);
 
-        useEffect(() => {
-          setLikes(0);
-          setLiked(false);
-        }, []);
+  useEffect(() => {
+    if (commented) {
+      setComments(comments + 1);
+    }
+  }, [commented, comments]);
 
-        useEffect(() => {
-          if (liked) {
-            setLikes(likes + 1);
-          }
-        }, [liked, likes]);
+  useEffect(() => {
+    setLikes(0);
+    setLiked(false);
+  }, []);
 
-        return (
-          <>
-            <Container>
-              <Card size={CardSize.XL} hasRoundBorders={true}>
-                <div className="relative">
-                  <div className="absolute -top-s -left-[80px]">
-                    <Avatar
-                      alt="Display Name @displayName"
-                      showBorder
-                      size={AvatarSize.M}
-                      src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
-                    />
-                  </div>
+  useEffect(() => {
+    if (liked) {
+      setLikes(likes + 1);
+    }
+  }, [liked, likes]);
 
-                  <div className="label-xl text-slate-900 mb-xxs">Hans Muster</div>
+  return (
+    <>
+      <Container>
+        <Card size={CardSize.XL} hasRoundBorders={true}>
+          <div className="relative">
+            <div className="absolute -top-s -left-[80px]">
+              <Avatar
+                alt="Display Name @displayName"
+                showBorder
+                size={AvatarSize.M}
+                src="https://randompicturegenerator.com/img/people-generator/gd121f56d8674f28d00ce9f1c44686e7a9bee58b8d33a3c57daaada1fa493c214290f9490833d1ff18f4ee16cd5298e1f_640.jpg"
+              />
+            </div>
 
-                  <div className="flex gap-s">
-                    <IconLink
-                      type={IconLinkType.VIOLET}
-                      label="Hans Muster"
-                      href=""
-                      target=""
-                      onClick={() => {}}
-                    >
-                      <Profile />
-                    </IconLink>
-                    <IconLink
-                      type={IconLinkType.DEFAULT}
-                      label="22.02.1978"
-                      href=""
-                      target=""
-                      onClick={() => {}}
-                    >
-                      <Time />
-                    </IconLink>
-                  </div>
+            <div className="label-xl text-slate-900 mb-xxs">Hans Muster</div>
 
-                  <div className="paragraph-l text-slate-900 grid pt-m gap-m">
-                    <div>
-                      Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam
-                      eget ultricies ipsum. Quisque rutrum orci non risus dignissim, a
-                      semper tortor ultricies. Nam commodo lacus mi, molestie
-                      malesuada mi scelerisque eu. Aenean et pellentesque lectus, in
-                      iaculis sem. In ac efficitur lectus. Quisque consectetur est
-                      libero, eu sagittis magna vestibulum a. Etiam consectetur
-                      lobortis ipsum et bibendum. Maecenas id purus quam.
-                    </div>
-                    <div className="flex gap-xs">
-                      <Hashtag
-                        label="myhashtag"
-                        onClick={() => {
-                          alert("Hashtag clicked!");
-                        }}
-                      />
-                      <Hashtag
-                        label="myhashtag2"
-                        onClick={() => {
-                          alert("Hashtag2 clicked!");
-                        }}
-                      />
-                    </div>
-                  </div>
+            <div className="flex gap-s">
+              <IconLink type={IconLinkType.VIOLET} label="Hans Muster" href="" target="" onClick={() => {}}>
+                <Profile />
+              </IconLink>
+              <IconLink type={IconLinkType.DEFAULT} label="22.02.1978" href="" target="" onClick={() => {}}>
+                <Time />
+              </IconLink>
+            </div>
 
-                  <div className="py-m flex gap-s">
-                    <Interaction
-                      type={InteractionType.VIOLET}
-                      active={commented}
-                      onClick={() => setCommented((c) => !c)}
-                    >
-                      {commented ? <ReplyFilled /> : <Reply />}
-                      {comments > 0 ? `${comments} Comments` : "Comment"}
-                    </Interaction>
-                    <Interaction
-                      type={InteractionType.PINK}
-                      active={liked}
-                      onClick={() => setLiked((l) => !l)}
-                    >
-                      {liked ? <HeartFilled /> : <Heart />}
-                      {likes > 0 ? `${likes} Likes` : liked ? "Liked" : "Like"}
-                    </Interaction>
-                    <Interaction onClick={() => {}} type={InteractionType.DEFAULT}>
-                      <Share />
-                      Copy link
-                    </Interaction>
-                  </div>
-                </div>
-              </Card>
-            </Container>
-          </>
-        );
-      }
+            <div className="paragraph-l text-slate-900 grid pt-m gap-m">
+              <div>
+                Sed at eleifend erat. Ut mattis malesuada tristique. Aliquam eget ultricies ipsum. Quisque rutrum orci non
+                risus dignissim, a semper tortor ultricies. Nam commodo lacus mi, molestie malesuada mi scelerisque eu.
+                Aenean et pellentesque lectus, in iaculis sem. In ac efficitur lectus. Quisque consectetur est libero, eu
+                sagittis magna vestibulum a. Etiam consectetur lobortis ipsum et bibendum. Maecenas id purus quam.
+              </div>
+              <div className="flex gap-xs">
+                <Hashtag
+                  label="myhashtag"
+                  onClick={() => {
+                    alert('Hashtag clicked!');
+                  }}
+                />
+                <Hashtag
+                  label="myhashtag2"
+                  onClick={() => {
+                    alert('Hashtag2 clicked!');
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="py-m flex gap-s">
+              <Interaction type={InteractionType.VIOLET} active={commented} onClick={() => setCommented((c) => !c)}>
+                {commented ? <ReplyFilled /> : <Reply />}
+                {comments > 0 ? `${comments} Comments` : 'Comment'}
+              </Interaction>
+              <Interaction type={InteractionType.PINK} active={liked} onClick={() => setLiked((l) => !l)}>
+                {liked ? <HeartFilled /> : <Heart />}
+                {likes > 0 ? `${likes} Likes` : liked ? 'Liked' : 'Like'}
+              </Interaction>
+              <Interaction onClick={() => {}} type={InteractionType.DEFAULT}>
+                <Share />
+                Copy link
+              </Interaction>
+            </div>
+          </div>
+        </Card>
+      </Container>
+    </>
+  );
+}
+```
