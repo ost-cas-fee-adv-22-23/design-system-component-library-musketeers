@@ -30,6 +30,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a Button in different variants. `,
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => {

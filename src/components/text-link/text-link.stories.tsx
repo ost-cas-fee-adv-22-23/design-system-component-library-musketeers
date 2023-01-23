@@ -18,6 +18,9 @@ export default {
       control: { type: 'select' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a styled Text Link.`,
+  },
 } as ComponentMeta<typeof TextLink>;
 
 const Template: ComponentStory<typeof TextLink> = (args) => {

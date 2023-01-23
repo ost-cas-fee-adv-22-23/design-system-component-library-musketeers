@@ -11,6 +11,9 @@ export default {
       control: { type: 'text' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders a Fileupload component.`,
+  },
 } as ComponentMeta<typeof FileUpload>;
 
 const Template: ComponentStory<typeof FileUpload> = (args) => {

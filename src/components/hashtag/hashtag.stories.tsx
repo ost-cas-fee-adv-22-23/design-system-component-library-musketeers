@@ -11,6 +11,9 @@ export default {
       control: { type: 'text' },
     },
   },
+  parameters: {
+    componentSubtitle: `Displays a Hashtag component.`,
+  },
 } as ComponentMeta<typeof Hashtag>;
 
 const Template: ComponentStory<typeof Hashtag> = (args) => {

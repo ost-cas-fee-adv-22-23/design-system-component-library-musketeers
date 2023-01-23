@@ -7,6 +7,9 @@ import { TabsItem } from './tabs-item';
 export default {
   title: `${StorybookMeta.COMPONENTS}/Tabs`,
   component: Tabs,
+  parameters: {
+    componentSubtitle: `Renders Tabs, the TabsItem component can be used and passed in via children.`,
+  },
 } as ComponentMeta<typeof Tabs>;
 
 export const TabsComponent: ComponentStory<typeof Tabs> = () => {

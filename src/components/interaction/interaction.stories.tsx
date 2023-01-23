@@ -21,6 +21,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
+  parameters: {
+    componentSubtitle: `Displays an Interaction Component. An Icon can be passed in via children. (Optional) See the examples below for configuration options.`,
+  },
 } as ComponentMeta<typeof Interaction>;
 
 const Template: ComponentStory<typeof Interaction> = (args) => {
