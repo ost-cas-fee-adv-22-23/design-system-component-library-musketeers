@@ -35,3 +35,7 @@ export * from './components/text-link/text-link';
 export * from './components/text-link/text-link.types';
 export * from './components/textarea/textarea';
 export * from './components/textarea/textarea.types';
+
+// Example components
+export * from './components/tweet/tweet';
+export * from './components/tweet/tweet.types';
