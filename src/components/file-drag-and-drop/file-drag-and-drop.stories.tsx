@@ -20,6 +20,9 @@ export default {
       control: { type: 'object' },
     },
   },
+  parameters: {
+    componentSubtitle: `Full featured File Drag-And-Drop component. Please note: This one uses internal component state.`,
+  },
 } as ComponentMeta<typeof FileDragAndDrop>;
 
 const Template: ComponentStory<typeof FileDragAndDrop> = (args) => {

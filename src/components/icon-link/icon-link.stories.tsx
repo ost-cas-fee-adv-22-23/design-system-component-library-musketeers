@@ -24,6 +24,9 @@ export default {
       control: { type: 'select' },
     },
   },
+  parameters: {
+    componentSubtitle: `Renders an IconLink component with configuration options. An Icon can be passed in via children.`,
+  },
 } as ComponentMeta<typeof IconLink>;
 
 const Template: ComponentStory<typeof IconLink> = (args) => {

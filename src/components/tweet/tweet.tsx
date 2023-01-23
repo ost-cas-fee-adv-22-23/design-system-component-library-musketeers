@@ -1,3 +1,4 @@
+// This is just an example, how you might build a feature component in your app, using components from this Design System.
 import React from 'react';
 import { TweetProps } from './tweet.types';
 

@@ -22,6 +22,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
+  parameters: {
+    componentSubtitle: `Displays a rounded image with optional border option.`,
+  },
 } as ComponentMeta<typeof Avatar>;
 
 const Template: ComponentStory<typeof Avatar> = (args) => {
