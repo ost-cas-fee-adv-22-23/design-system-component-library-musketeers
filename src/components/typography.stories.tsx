@@ -7,7 +7,7 @@ export default {
 
 const headings = () => (
   <div>
-    <p className="label-m text-violet-600 mb-l leading-normal">
+    <p className="label-m text-slate-600 mb-l leading-normal">
       Heading styles are available as CSS classes, you can use/apply them to any element.
       <br />
       So, as example, you can apply the .heading-1 class to a h3 or a span, to make it look visually like a h1.
@@ -23,7 +23,7 @@ export const Headings = headings.bind({});
 
 const paragraphs = () => (
   <div>
-    <p className="label-m text-violet-600 mb-l leading-normal">
+    <p className="label-m text-slate-600 mb-l leading-normal">
       Paragraph styles are available as CSS classes, you can use/apply them to any element.
     </p>
     <p className="paragraph-l mb-l">
@@ -42,7 +42,7 @@ export const Paragraphs = paragraphs.bind({});
 
 const labels = () => (
   <div>
-    <p className="label-m text-violet-600 mb-l leading-normal">
+    <p className="label-m text-slate-600 mb-l leading-normal">
       Label styles are available as CSS classes, you can use/apply them to any element.
     </p>
     <label className="label-xl block mb-m">Label XL (.label-xl)</label>
@@ -56,7 +56,7 @@ export const Labels = labels.bind({});
 
 const placeholder = () => (
   <div>
-    <p className="label-m text-violet-600 mb-l leading-normal">
+    <p className="label-m text-slate-600 mb-l leading-normal">
       The placeholder style is available as CSS class, you can use/apply it to any element.
     </p>
     <span className="placeholder block">Placeholder (.placeholder)</span>
