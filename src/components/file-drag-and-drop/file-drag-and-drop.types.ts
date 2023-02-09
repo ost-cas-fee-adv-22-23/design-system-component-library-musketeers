@@ -5,3 +5,10 @@ export type FileDragAndDropProps = {
   maximumFileSize?: number;
   validFileExtensions?: Array<string>;
 };
+
+export interface FileInputState {
+  fileName: string;
+  isFileSelected: boolean;
+  isOverDragArea: boolean;
+  errorMessage: string;
+}

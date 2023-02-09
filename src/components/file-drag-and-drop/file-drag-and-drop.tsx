@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import Upload from '../icons/Upload';
 import Checkmark from '../icons/Checkmark';
-import { FileDragAndDropProps } from './file-drag-and-drop.types';
-
-interface FileInputState {
-  fileName: string;
-  isFileSelected: boolean;
-  isOverDragArea: boolean;
-  errorMessage: string;
-}
+import { FileDragAndDropProps, FileInputState } from './file-drag-and-drop.types';
 
 export const FileDragAndDrop: React.FC<FileDragAndDropProps> = ({
   maximumFileSize = 5000000,
