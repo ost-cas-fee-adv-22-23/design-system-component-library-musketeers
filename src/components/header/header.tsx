@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import { HeaderProps } from './header.types';
 
 import { Container } from '../container/container';
@@ -9,17 +9,12 @@ export const Header: React.FC<HeaderProps> = (props) => {
   const logoWrapperClasses = 'w-52 hover:scale-105 transition';
   const svgClasses = 'block max-w-full height-auto';
 
-  const onClickLogoHandler = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    props.onClickLogo(event);
-  };
-
   return (
     <header className={headerBaseClasses}>
       <Container>
         <div className={innerBaseClasses}>
           <div className={logoWrapperClasses}>
-            <a href="" onClick={onClickLogoHandler}>
+            <a href={props.iconLinkUrl}>
               <svg
                 className={svgClasses}
                 width="335"

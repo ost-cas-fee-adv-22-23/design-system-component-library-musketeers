@@ -1,4 +1,4 @@
-import React, { useId, useRef, MutableRefObject } from 'react';
+import React, { useId, useRef } from 'react';
 import { FileUploadProps } from './file-upload.types';
 import { Button } from '../button/button';
 import { ButtonType, ButtonSize } from '../button/button.types';
@@ -6,10 +6,10 @@ import Upload from '../../components/icons/Upload';
 
 export const FileUpload: React.FC<FileUploadProps> = (props) => {
   const id = useId();
-  const fileInputRef = useRef() as MutableRefObject<HTMLInputElement>;
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleUploadBtnClick = () => {
-    fileInputRef.current.click();
+    fileInputRef.current?.click();
   };
 
   return (

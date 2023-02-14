@@ -1,6 +1,6 @@
-import { ReactNode, MouseEvent } from 'react';
+import { ReactNode } from 'react';
 
 export type HeaderProps = {
   children?: ReactNode;
-  onClickLogo: (e: MouseEvent<HTMLAnchorElement>) => void;
+  iconLinkUrl: string;
 };

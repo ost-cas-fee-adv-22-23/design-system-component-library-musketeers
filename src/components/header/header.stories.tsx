@@ -24,6 +24,9 @@ const Template: ComponentStory<typeof Header> = (args) => {
 };
 
 export const HeaderComponent: ComponentStory<typeof Header> = Template.bind({});
+HeaderComponent.args = {
+  iconLinkUrl: '#',
+};
 
 export const HeaderWithNavigation: ComponentStory<typeof Header> = (args) => {
   return (
