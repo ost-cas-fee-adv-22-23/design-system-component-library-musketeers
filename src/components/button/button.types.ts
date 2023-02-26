@@ -22,4 +22,6 @@ export type ButtonProps = {
   showBorder?: boolean;
   isFullWidth?: boolean;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  elementType?: React.ElementType;
+  href?: string;
 };

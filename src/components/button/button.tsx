@@ -1,8 +1,13 @@
 import React from 'react';
 import { ButtonProps, ButtonSize, ButtonType } from './button.types';
 
-export const Button: React.FC<ButtonProps> = ({ showBorder = true, isFullWidth = false, ...props }) => {
-  const baseClasses = ['flex items-center h-fit text-white rounded-default transition'];
+export const Button: React.FC<ButtonProps> = ({
+  showBorder = true,
+  isFullWidth = false,
+  elementType: Component = 'button',
+  ...props
+}) => {
+  const baseClasses = ['flex items-center h-fit text-white rounded-default transition cursor-pointer'];
   const iconClasses = [
     'text-white rounded-38 bg-slate-600 hover:bg-slate-700 hover:border-slate-100 focus:border-slate-200 transition',
   ];
@@ -46,14 +51,23 @@ export const Button: React.FC<ButtonProps> = ({ showBorder = true, isFullWidth =
     baseClasses.push('w-full justify-center');
   }
 
+  if (props.href) {
+    return (
+      <Component href={props.href} class={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}>
+        <span hidden={props.isIconOnly}>{props.label}</span>
+        <span className={props.isIconOnly ? '' : 'pl-xs'}>{props.children}</span>
+      </Component>
+    );
+  }
+
   return (
-    <button
+    <Component
       onClick={props.onClick}
       aria-label={props.label}
-      className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
+      class={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
     >
       <span hidden={props.isIconOnly}>{props.label}</span>
       <span className={props.isIconOnly ? '' : 'pl-xs'}>{props.children}</span>
-    </button>
+    </Component>
   );
 };
