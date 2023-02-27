@@ -10,4 +10,6 @@ export type AvatarProps = {
   alt?: string;
   size?: AvatarSize;
   showBorder?: boolean;
+  elementType?: React.ElementType;
+  href?: string;
 };

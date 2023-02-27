@@ -98,3 +98,13 @@ ButtonIconOnly.args = {
   isIconOnly: true,
   isFullWidth: true,
 };
+
+export const ButtonAsLink: ComponentStory<typeof Button> = Template.bind({});
+ButtonAsLink.args = {
+  size: ButtonSize.M,
+  isFullWidth: true,
+  type: ButtonType.VIOLET,
+  label: 'Button Label',
+  elementType: 'a',
+  href: '',
+};

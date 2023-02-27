@@ -109,3 +109,29 @@ NavigationItemWithLogOutIcon.parameters = {
     },
   },
 };
+
+const TemplateAsAnchor: ComponentStory<typeof NavigationItem> = (args) => {
+  return (
+    <div className="bg-violet-700 p-s">
+      <NavigationItem {...args}>
+        <span className="animation-svg-logout">
+          <LogOut width="16" height="16" />
+        </span>
+      </NavigationItem>
+    </div>
+  );
+};
+
+export const NavigationItemAsAnchor: ComponentStory<typeof NavigationItem> = TemplateAsAnchor.bind({});
+NavigationItemAsAnchor.args = {
+  label: 'Link',
+  elementType: 'a',
+  href: '',
+};
+NavigationItemAsAnchor.parameters = {
+  docs: {
+    description: {
+      story: 'Demo usage with an [Icon](http://localhost:6006/?path=/docs/foundations-icons--page)',
+    },
+  },
+};

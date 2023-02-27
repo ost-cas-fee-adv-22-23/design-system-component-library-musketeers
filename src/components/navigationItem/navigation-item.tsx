@@ -1,18 +1,29 @@
 import React from 'react';
 import { NavigationItemProps } from './navigation-item.types';
 
-export const NavigationItem: React.FC<NavigationItemProps> = (props) => {
+export const NavigationItem: React.FC<NavigationItemProps> = ({ elementType: Component = 'button', ...props }) => {
   const navigationItemBaseClasses =
-    'group transition-colors hover:bg-violet-600 h-xxl w-xxl rounded-default grid content-center text-white';
+    'group transition-colors hover:bg-violet-600 h-xxl w-xxl rounded-default grid content-center text-white cursor-pointer';
   const buttonBaseClasses = 'grid gap-xxs justify-items-center';
   const labelBaseClasses = 'label-s text-white';
 
+  if (props.href) {
+    return (
+      <li className={navigationItemBaseClasses}>
+        <Component href={props.href} class={buttonBaseClasses}>
+          {props.children}
+          <span className={labelBaseClasses}>{props.label}</span>
+        </Component>
+      </li>
+    );
+  }
+
   return (
     <li className={navigationItemBaseClasses}>
-      <button onClick={props.onClick} className={buttonBaseClasses}>
+      <Component onClick={props.onClick} class={buttonBaseClasses}>
         {props.children}
         <span className={labelBaseClasses}>{props.label}</span>
-      </button>
+      </Component>
     </li>
   );
 };

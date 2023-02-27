@@ -3,7 +3,7 @@ import { HeaderProps } from './header.types';
 
 import { Container } from '../container/container';
 
-export const Header: React.FC<HeaderProps> = (props) => {
+export const Header: React.FC<HeaderProps> = ({ elementType: Component = 'a', ...props }) => {
   const headerBaseClasses = 'bg-violet-700 h-20';
   const innerBaseClasses = 'h-20 flex items-center place-content-between';
   const logoWrapperClasses = 'w-52 hover:scale-105 transition';
@@ -14,7 +14,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
       <Container>
         <div className={innerBaseClasses}>
           <div className={logoWrapperClasses}>
-            <a href={props.iconLinkUrl}>
+            <Component href={props.iconLinkUrl}>
               <svg
                 className={svgClasses}
                 width="335"
@@ -68,7 +68,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   </clipPath>
                 </defs>
               </svg>
-            </a>
+            </Component>
           </div>
           <div>{props.children}</div>
         </div>
