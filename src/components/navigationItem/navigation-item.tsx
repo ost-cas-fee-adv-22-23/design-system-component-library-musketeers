@@ -10,7 +10,7 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({ elementType: Com
   if (props.href) {
     return (
       <li className={navigationItemBaseClasses}>
-        <Component href={props.href} class={buttonBaseClasses}>
+        <Component href={props.href} className={buttonBaseClasses}>
           {props.children}
           <span className={labelBaseClasses}>{props.label}</span>
         </Component>
@@ -20,7 +20,7 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({ elementType: Com
 
   return (
     <li className={navigationItemBaseClasses}>
-      <Component onClick={props.onClick} class={buttonBaseClasses}>
+      <Component onClick={props.onClick} className={buttonBaseClasses}>
         {props.children}
         <span className={labelBaseClasses}>{props.label}</span>
       </Component>
