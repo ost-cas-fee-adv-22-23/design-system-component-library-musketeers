@@ -1,4 +1,16 @@
 {
   "extends": ["@smartive/eslint-config/react"],
-  "ignorePatterns": ["*.mdx"]
+  "ignorePatterns": ["*.mdx"],
+  "overrides": [
+    {
+      "files": [
+        "src/components/button/button.tsx",
+        "src/components/navigationItem/navigation-item.tsx",
+        "src/components/text-link/text-link.tsx"
+      ],
+      "rules": {
+        "react/forbid-component-props": ["error", { "forbid": [] }]
+      }
+    }
+  ]
 }
