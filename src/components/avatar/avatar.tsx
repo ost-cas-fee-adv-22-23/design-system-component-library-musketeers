@@ -1,7 +1,11 @@
 import React from 'react';
 import { AvatarProps, AvatarSize } from './avatar.types';
 
-export const Avatar: React.FC<AvatarProps> = ({ elementType: Component = 'a', ...props }) => {
+export const Avatar: React.FC<AvatarProps> = ({
+  elementType: Component = 'a',
+  imageElementType: ImageComponent = 'img',
+  ...props
+}) => {
   const imageClasses = ['inline-block rounded-full bg-violet-200 hover:scale-125 group-hover:scale-125 duration-300'];
   const wrapperClasses = ['inline-block rounded-full overflow-hidden'];
 
@@ -29,7 +33,7 @@ export const Avatar: React.FC<AvatarProps> = ({ elementType: Component = 'a', ..
     return (
       <Component href={props.href}>
         <span className={wrapperClasses.join(' ')}>
-          <img className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
+          <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
         </span>
       </Component>
     );
@@ -37,7 +41,7 @@ export const Avatar: React.FC<AvatarProps> = ({ elementType: Component = 'a', ..
 
   return (
     <span className={wrapperClasses.join(' ')}>
-      <img className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
+      <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
     </span>
   );
 };

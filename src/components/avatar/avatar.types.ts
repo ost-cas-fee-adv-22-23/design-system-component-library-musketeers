@@ -11,5 +11,6 @@ export type AvatarProps = {
   size?: AvatarSize;
   showBorder?: boolean;
   elementType?: React.ElementType;
+  imageElementType?: React.ElementType;
   href?: string;
 };
