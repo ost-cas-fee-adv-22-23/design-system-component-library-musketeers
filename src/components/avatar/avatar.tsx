@@ -33,7 +33,12 @@ export const Avatar: React.FC<AvatarProps> = ({
     return (
       <Component href={props.href}>
         <span className={wrapperClasses.join(' ')}>
-          <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
+          <ImageComponent
+            className={imageClasses.join(' ')}
+            src={props.src}
+            alt={props.alt}
+            {...props.imageComponentProps}
+          />
         </span>
       </Component>
     );
@@ -41,7 +46,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 
   return (
     <span className={wrapperClasses.join(' ')}>
-      <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} />
+      <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} {...props.imageComponentProps} />
     </span>
   );
 };
