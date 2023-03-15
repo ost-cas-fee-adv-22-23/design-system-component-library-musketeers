@@ -1,8 +1,16 @@
 import React from 'react';
-import { HashtagProps } from './hashtag.types';
+import { HashtagProps, HashtagSize } from './hashtag.types';
 
-export const Hashtag: React.FC<HashtagProps> = (props) => {
-  const baseClasses = ['paragraph-l text-violet-600 hover:text-violet-500 transition'];
+export const Hashtag: React.FC<HashtagProps> = ({ size = HashtagSize.L, ...props }) => {
+  const baseClasses = ['text-violet-600 hover:text-violet-500 transition'];
+
+  if (size === HashtagSize.M) {
+    baseClasses.push('paragraph-m');
+  }
+
+  if (size === HashtagSize.L) {
+    baseClasses.push('paragraph-l');
+  }
 
   return (
     <button onClick={props.onClick} title={props.label} className={baseClasses.join(' ')}>
