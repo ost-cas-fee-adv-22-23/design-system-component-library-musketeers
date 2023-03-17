@@ -5,7 +5,7 @@ export const Card: React.FC<CardProps> = (props) => {
   const baseClasses = ['bg-white border-2 border-slate-200'];
 
   if (props.size === CardSize.XL) {
-    baseClasses.push('py-l px-xl');
+    baseClasses.push('p-s sm:py-l md:px-xl');
   }
 
   if (props.size === CardSize.S) {
