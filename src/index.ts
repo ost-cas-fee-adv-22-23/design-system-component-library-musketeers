@@ -30,6 +30,7 @@ export * from './components/navigationItem/navigation-item.types';
 export * from './components/profile-image/profile-image';
 export * from './components/profile-image/profile-image.types';
 export * from './components/tabs/tabs';
+export * from './components/tabs/tabs-item';
 export * from './components/tabs/tabs.types';
 export * from './components/text-link/text-link';
 export * from './components/text-link/text-link.types';
