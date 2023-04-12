@@ -2,7 +2,7 @@ import React from 'react';
 import { HashtagProps, HashtagSize } from './hashtag.types';
 
 export const Hashtag: React.FC<HashtagProps> = ({ size = HashtagSize.L, ...props }) => {
-  const baseClasses = ['text-violet-600 hover:text-violet-500 transition'];
+  const baseClasses = ['text-violet-600 hover:text-violet-500 transition break-all text-left'];
 
   if (size === HashtagSize.M) {
     baseClasses.push('paragraph-m');
