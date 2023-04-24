@@ -7,7 +7,8 @@
         "src/components/button/button.tsx",
         "src/components/navigationItem/navigation-item.tsx",
         "src/components/text-link/text-link.tsx",
-        "src/components/avatar/avatar.tsx"
+        "src/components/avatar/avatar.tsx",
+        "src/components/icon-link/icon-link.tsx"
       ],
       "rules": {
         "react/forbid-component-props": ["error", { "forbid": [] }]

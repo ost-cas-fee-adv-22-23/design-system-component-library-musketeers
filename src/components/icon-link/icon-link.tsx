@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconLinkProps, IconLinkType } from './icon-link.types';
 
-export const IconLink: React.FC<IconLinkProps> = (props) => {
+export const IconLink: React.FC<IconLinkProps> = ({ elementType: Component = 'a', ...props }) => {
   const baseClasses = ['flex items-center h-fit text-14 font-semibold'];
 
   if (props.href || props.onClick) {
@@ -25,7 +25,7 @@ export const IconLink: React.FC<IconLinkProps> = (props) => {
   }
 
   return (
-    <a
+    <Component
       onClick={props.onClick}
       target={props.target}
       href={props.href}
@@ -34,6 +34,6 @@ export const IconLink: React.FC<IconLinkProps> = (props) => {
     >
       <span>{props.children}</span>
       <span className={'pl-xxs'}>{props.label}</span>
-    </a>
+    </Component>
   );
 };
