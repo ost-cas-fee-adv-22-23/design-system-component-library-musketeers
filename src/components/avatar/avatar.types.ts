@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react';
+
 export enum AvatarSize {
   S = 's',
   M = 'm',
@@ -14,4 +16,5 @@ export type AvatarProps = {
   imageElementType?: React.ElementType;
   imageComponentProps?: { [key: string]: string };
   href?: string;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 };
