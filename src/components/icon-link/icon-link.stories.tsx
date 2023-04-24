@@ -42,3 +42,27 @@ IconLinkComponent.args = {
   type: IconLinkType.VIOLET,
   label: 'Username',
 };
+
+export const IconLinkComponentOnlyHref: ComponentStory<typeof IconLink> = Template.bind({});
+IconLinkComponentOnlyHref.args = {
+  type: IconLinkType.VIOLET,
+  label: 'Username',
+  href: 'https://www.google.com',
+  onClick: undefined,
+};
+
+export const IconLinkComponentOnlyOnClick: ComponentStory<typeof IconLink> = Template.bind({});
+IconLinkComponentOnlyOnClick.args = {
+  type: IconLinkType.VIOLET,
+  label: 'Username',
+  href: undefined,
+  onClick: () => alert('Clicked'),
+};
+
+export const IconLinkComponentNoInteraction: ComponentStory<typeof IconLink> = Template.bind({});
+IconLinkComponentNoInteraction.args = {
+  type: IconLinkType.VIOLET,
+  label: 'Username',
+  href: undefined,
+  onClick: undefined,
+};
