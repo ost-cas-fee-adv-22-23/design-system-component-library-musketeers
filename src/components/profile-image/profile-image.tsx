@@ -45,7 +45,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({
           type={ButtonType.DEFAULT}
           size={ButtonSize.S}
           isIconOnly={true}
-          aria-label={editButtonAriaLabel}
+          ariaLabel={editButtonAriaLabel}
         >
           <EditIcon width="16" height="16" />
         </Button>

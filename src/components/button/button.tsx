@@ -53,7 +53,11 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (props.href) {
     return (
-      <Component href={props.href} className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}>
+      <Component
+        href={props.href}
+        className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
+        aria-label={props.ariaLabel || props.label}
+      >
         <span hidden={props.isIconOnly}>{props.label}</span>
         <span className={props.isIconOnly ? '' : 'pl-xs'}>{props.children}</span>
       </Component>
@@ -63,7 +67,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <Component
       onClick={props.onClick}
-      aria-label={props.label}
+      aria-label={props.ariaLabel || props.label}
       className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
     >
       <span hidden={props.isIconOnly}>{props.label}</span>

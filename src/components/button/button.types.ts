@@ -24,4 +24,5 @@ export type ButtonProps = {
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   elementType?: React.ElementType;
   href?: string;
+  ariaLabel?: string;
 };
