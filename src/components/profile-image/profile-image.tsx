@@ -6,7 +6,13 @@ import EditIcon from '../../components/icons/Edit';
 import { Button } from '../button/button';
 import { ButtonSize, ButtonType } from '../button/button.types';
 
-export const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, size = AvatarSize.XL, onClick }) => {
+export const ProfileImage: React.FC<ProfileImageProps> = ({
+  src,
+  alt,
+  size = AvatarSize.XL,
+  onClick,
+  editButtonAriaLabel,
+}) => {
   const baseClasses = ['inline-block relative'];
   const buttonWrapperClasses = ['absolute bottom-0 right-0'];
 
@@ -33,7 +39,14 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, size = Ava
       <Avatar src={src} alt={alt} size={size} showBorder={true} />
 
       <div className={buttonWrapperClasses.join(' ')}>
-        <Button showBorder={false} onClick={onClick} type={ButtonType.DEFAULT} size={ButtonSize.S} isIconOnly={true}>
+        <Button
+          showBorder={false}
+          onClick={onClick}
+          type={ButtonType.DEFAULT}
+          size={ButtonSize.S}
+          isIconOnly={true}
+          aria-label={editButtonAriaLabel}
+        >
           <EditIcon width="16" height="16" />
         </Button>
       </div>
