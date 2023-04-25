@@ -6,4 +6,5 @@ export type ProfileImageProps = {
   alt: string;
   size?: AvatarSize;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  editButtonAriaLabel?: string;
 };
