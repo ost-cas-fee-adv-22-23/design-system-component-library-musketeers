@@ -8,4 +8,5 @@ export type TextareaProps = {
   onChange?: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   hasError?: boolean;
   errorMessage?: string;
+  e2e?: string;
 };

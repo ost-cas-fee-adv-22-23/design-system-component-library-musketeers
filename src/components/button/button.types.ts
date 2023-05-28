@@ -25,4 +25,5 @@ export type ButtonProps = {
   elementType?: React.ElementType;
   href?: string;
   ariaLabel?: string;
+  e2e?: string;
 };
