@@ -35,7 +35,7 @@ export const Interaction: React.FC<InteractionProps> = (props) => {
   });
 
   return (
-    <button className={baseClasses.join(' ')} onClick={props.onClick}>
+    <button className={baseClasses.join(' ')} onClick={props.onClick} data-e2e={props.e2e}>
       {interactionContent}
     </button>
   );

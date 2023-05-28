@@ -31,7 +31,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 
   if (props.href) {
     return (
-      <Component href={props.href} onClick={props.onClick}>
+      <Component href={props.href} onClick={props.onClick} data-e2e={props.e2e}>
         <span className={wrapperClasses.join(' ')}>
           <ImageComponent
             className={imageClasses.join(' ')}
@@ -45,7 +45,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   }
 
   return (
-    <span className={wrapperClasses.join(' ')} onClick={props.onClick}>
+    <span className={wrapperClasses.join(' ')} onClick={props.onClick} data-e2e={props.e2e}>
       <ImageComponent className={imageClasses.join(' ')} src={props.src} alt={props.alt} {...props.imageComponentProps} />
     </span>
   );

@@ -8,4 +8,5 @@ export type TabsItemProps = {
   active: boolean;
   label: string;
   onClick?: () => void;
+  e2e?: string;
 };

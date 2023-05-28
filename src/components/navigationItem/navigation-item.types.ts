@@ -6,4 +6,5 @@ export type NavigationItemProps = {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   elementType?: React.ElementType;
   href?: string;
+  e2e?: string;
 };

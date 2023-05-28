@@ -5,4 +5,5 @@ export type TextLinkProps = {
   href?: string;
   target?: HTMLAttributeAnchorTarget;
   elementType?: React.ElementType;
+  e2e?: string;
 };

@@ -17,4 +17,5 @@ export type AvatarProps = {
   imageComponentProps?: { [key: string]: string };
   href?: string;
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
+  e2e?: string;
 };
