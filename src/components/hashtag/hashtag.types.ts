@@ -9,5 +9,5 @@ export type HashtagProps = {
   label?: string;
   size?: HashtagSize;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
-  e2e?: string;
+  testid?: string;
 };
