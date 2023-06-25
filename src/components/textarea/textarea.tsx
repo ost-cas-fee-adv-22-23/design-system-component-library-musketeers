@@ -43,7 +43,7 @@ export const Textarea: React.FC<TextareaProps> = ({ rows = 8, ...props }) => {
         placeholder={props.placeholder}
         className={textareaBaseClasses.join(' ')}
         rows={rows}
-        data-e2e={props.e2e}
+        data-testid={props.testid}
       />
       {props.hasError && props.errorMessage ? <div className={errorMessageClasses.join(' ')}>{props.errorMessage}</div> : ''}
     </div>

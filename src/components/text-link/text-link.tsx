@@ -6,7 +6,13 @@ export const TextLink: React.FC<TextLinkProps> = ({ elementType: Component = 'a'
     'text-violet-600 border-b-2 border-violet-600 hover:border-violet-200 h-fit text-14 font-semibold cursor-pointer';
 
   return (
-    <Component target={props.target} href={props.href} className={baseClasses} aria-label={props.label} data-e2e={props.e2e}>
+    <Component
+      target={props.target}
+      href={props.href}
+      className={baseClasses}
+      aria-label={props.label}
+      data-testid={props.testid}
+    >
       {props.label}
     </Component>
   );

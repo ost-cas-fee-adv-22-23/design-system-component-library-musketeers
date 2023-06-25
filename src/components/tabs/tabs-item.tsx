@@ -11,7 +11,7 @@ export const TabsItem: React.FC<TabsItemProps> = (props) => {
   }
 
   return (
-    <li onClick={props.onClick} className={baseClasses.join(' ')} data-e2e={props.e2e}>
+    <li onClick={props.onClick} className={baseClasses.join(' ')} data-testid={props.testid}>
       {props.label}
     </li>
   );

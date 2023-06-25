@@ -11,5 +11,5 @@ export type InteractionProps = {
   active?: boolean;
   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
-  e2e?: string;
+  testid?: string;
 };

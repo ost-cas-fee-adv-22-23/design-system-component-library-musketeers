@@ -56,7 +56,7 @@ export const Input: React.FC<InputProps> = ({ type = InputType.TEXT, ...props })
           type={type}
           placeholder={props.placeholder}
           className={inputBaseClasses.join(' ')}
-          data-e2e={props.e2e}
+          data-testid={props.testid}
         />
         {(props.children || props.hasError) && (
           <span className={iconBaseClasses.join(' ')}>{props.hasError ? <Cancel color="text-red" /> : props.children}</span>

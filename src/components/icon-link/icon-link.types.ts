@@ -13,5 +13,5 @@ export type IconLinkProps = {
   children?: ReactNode;
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
   elementType?: React.ElementType;
-  e2e?: string;
+  testid?: string;
 };
