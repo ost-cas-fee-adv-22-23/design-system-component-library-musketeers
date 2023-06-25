@@ -57,7 +57,7 @@ export const Button: React.FC<ButtonProps> = ({
         href={props.href}
         className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
         aria-label={props.ariaLabel || props.label}
-        data-e2e={props.e2e}
+        data-testid={props.testid}
       >
         <span hidden={props.isIconOnly}>{props.label}</span>
         <span className={props.isIconOnly ? '' : 'pl-xs'}>{props.children}</span>
@@ -70,7 +70,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={props.onClick}
       aria-label={props.ariaLabel || props.label}
       className={props.isIconOnly ? iconClasses.join(' ') : baseClasses.join(' ')}
-      data-e2e={props.e2e}
+      data-testid={props.testid}
     >
       <span hidden={props.isIconOnly}>{props.label}</span>
       <span className={props.isIconOnly ? '' : 'pl-xs'}>{props.children}</span>

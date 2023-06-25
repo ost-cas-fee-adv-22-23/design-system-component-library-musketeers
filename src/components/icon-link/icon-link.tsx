@@ -31,7 +31,7 @@ export const IconLink: React.FC<IconLinkProps> = ({ elementType: Component = 'a'
       href={props.href}
       className={baseClasses.join(' ')}
       aria-label={props.label}
-      data-e2e={props.e2e}
+      data-testid={props.testid}
     >
       <span>{props.children}</span>
       <span className={'pl-xxs'}>{props.label}</span>

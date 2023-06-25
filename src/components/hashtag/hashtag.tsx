@@ -13,7 +13,7 @@ export const Hashtag: React.FC<HashtagProps> = ({ size = HashtagSize.L, ...props
   }
 
   return (
-    <button onClick={props.onClick} title={props.label} className={baseClasses.join(' ')} data-e2e={props.e2e}>
+    <button onClick={props.onClick} title={props.label} className={baseClasses.join(' ')} data-testid={props.testid}>
       #{props.label}
     </button>
   );

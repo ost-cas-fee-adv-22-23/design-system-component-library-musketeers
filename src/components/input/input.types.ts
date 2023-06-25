@@ -15,5 +15,5 @@ export type InputProps = {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   hasError?: boolean;
   errorMessage?: string;
-  e2e?: string;
+  testid?: string;
 };
