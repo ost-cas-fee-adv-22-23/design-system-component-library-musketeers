@@ -181,7 +181,7 @@ https://trello.com/b/BK3h5ADR/mumble
 We stay in line with Ketta Naito's Naming Cheat-Sheet. Comprehensive language-agnostic guidelines on variables naming:
 https://github.com/kettanaito/naming-cheatsheet
 
-### Branch naming
+### Branch Naming
 
 Our workflow is loosely based on Git-Flow. We have a develop and a main branch. Our feature branches are based on the develop branch.
 The pattern for naming a branch is: {ticket-id}-{short}-{topic}-{title}
